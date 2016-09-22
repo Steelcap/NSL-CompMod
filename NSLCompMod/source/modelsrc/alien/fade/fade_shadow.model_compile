@@ -1,0 +1,128 @@
+geometry        "fade_shadow.fbx"
+
+physics
+{
+    default     "fade_shadow_physics.fbx"
+    damage      "fade_shadow_physics.fbx"
+}
+
+attach_point	"fade_tongue2"
+attach_point	"babbler_attach1"
+attach_point	"babbler_attach2"
+attach_point	"babbler_attach3"
+attach_point	"babbler_attach4"
+attach_point	"babbler_attach5"
+attach_point	"babbler_attach6"
+
+animation_model "models/alien/fade/fade.model"
+
+bone_order_override
+{
+    0    "fade_root"
+    1    "fade_Hip"
+    2    "fade_spine"
+    3    "fade_midtent_base"
+    4    "fade_chest"
+    5    "fade_rarm_clavicle"
+    6    "fade_rneck_shoulder"
+    7    "fade_lneck_shoulder"
+    8    "fade_neckupper2"
+    9    "fade_rarm_pec"
+    10    "fade_uptent_base"
+    11    "fade_larm_clavicle"
+    12    "fade_larm_pec"
+    13    "fade_neck"
+    14    "fade_head"
+    15    "fade_tongue1"
+    16    "fade_neckupper"
+    17    "fade_rcheek"
+    18    "fade_rlid"
+    19    "fade_reye"
+    20    "fade_rmouthspar"
+    21    "fade_lcheek"
+    22    "fade_llid"
+    23    "fade_leye"
+    24    "fade_lmouthspar"
+    25    "fade_bonehead"
+    26    "fade_jaw"
+    27    "fade_gullet"
+    28    "fade_lneck_head"
+    29    "fade_rneck_head"
+    30    "fade_tongue2"
+    31    "fade_larm_deltoid"
+    32    "fade_larm_shoulder"
+    33    "fade_larm_shouldertwist1"
+    34    "fade_larm_elbow"
+    35    "fade_larm_web"
+    36    "fade_"
+    37    "fade_larm_claw"
+    38    "fade_larm_shouldertwist2"
+    39    "fade_uptent_mid"
+    40    "fade_uptent_end"
+    41    "fade_rarm_deltoid"
+    42    "fade_rarm_shoulder"
+    43    "fade_rarm_shouldertwist1"
+    44    "fade_rarm_elbow"
+    45    "fade_rarm_web"
+    46    "fade_rarm_bicep"
+    47    "fade_rarm_claw"
+    48    "fade_rarm_shouldertwist2"
+    49    "fade_midtent_mid"
+    50    "fade_midtent_end"
+    51    "fade_lowtent_base"
+    52    "fade_rleg_thigh"
+    53    "fade_lleg_thigh"
+    54    "fade_lleg_cap"
+    55    "fade_lleg_calf"
+    56    "fade_lleg_ankle"
+    57    "fade_lleg_pad1"
+    58    "fade_lleg_pad2"
+    59    "fade_lleg_toeleft"
+    60    "fade_lleg_toeright"
+    61    "fade_rleg_cap"
+    62    "fade_rleg_calf"
+    63    "fade_rleg_ankle"
+    64    "fade_rleg_pad1"
+    65    "fade_rleg_pad2"
+    66    "fade_rleg_toeright"
+    67    "fade_rleg_toeleft"
+    68    "fade_lowtent_mid1"
+    69    "fade_lowtent_mid2"
+    70    "fade_lowtent_end"
+}
+
+joint   "Joint_LToes"       "Collision_LPad"        "Collision_LToes"       20  35  20
+joint   "Joint_LPad"        "Collision_LAnkle"      "Collision_LPad"        25  45  40
+joint   "Joint_LAnkle"      "Collision_LKnee"       "Collision_LAnkle"      25  45  25
+joint   "Joint_LClaw"       "Collision_LWrist"      "Collision_LClaw"       0   2   0
+joint   "Joint_LKnee"       "Collision_LThigh"      "Collision_LKnee"       0   55  0
+joint   "Joint_RKnee"       "Collision_RThigh"      "Collision_RKnee"       0   55  0
+joint   "Joint_RElbow"      "Collision_RShoulder"   "Collision_RForearm"    45  45  45
+joint   "Joint_LElbow"      "Collision_LShoulder"   "Collision_LForearm"    0   65  0
+joint   "Joint_RAnkle"      "Collision_RKnee"       "Collision_RAnkle"      25  45  25
+joint   "Joint_RToes"       "Collision_RPad"        "Collision_RToes"       20  35  20
+joint   "Joint_RPad"        "Collision_RAnkle"      "Collision_RToes"       25  45  40
+joint   "Joint_LThigh"      "Collision_Root"        "Collision_LThigh"      33  55  40
+joint   "Joint_RThigh"      "Collision_Root"        "Collision_RThigh"      33  55  40
+joint   "Joint_Spine"       "Collision_Root"        "Collision_Spine"       25  60  40
+joint   "Joint_Chest"       "Collision_Spine"       "Collision_Chest"       25  55  40
+joint   "Joint_Neck"        "Collision_Chest"       "Collision_Neck"        35  45  30
+joint   "Joint_Head"        "Collision_Neck"        "Collision_Head"        35  45  30
+joint   "Joint_Jaw"         "Collision_Head"        "Collision_Jaw"         20  30  15
+joint   "Joint_UpTent00"    "Collision_Chest"       "Collision_UpTent00"    25  40  15
+joint   "Joint_UpTent01"    "Collision_UpTent00"    "Collision_UpTent01"    40  40  15
+joint   "Joint_UpTent02"    "Collision_UpTent01"    "Collision_UpTent02"    40  40  15
+joint   "Joint_MidTent00"   "Collision_Spine"       "Collision_MidTent00"   25  40  15
+joint   "Joint_MidTent01"   "Collision_MidTent00"   "Collision_MidTent01"   40  40  15
+joint   "Joint_MidTent02"   "Collision_MidTent01"   "Collision_MidTent02"   40  40  15
+joint   "Joint_LowTent00"   "Collision_Root"        "Collision_LowTent00"   25  40  15
+joint   "Joint_LowTent01"   "Collision_LowTent00"   "Collision_LowTent01"   40  40  15
+joint   "Joint_LowTent02"   "Collision_LowTent01"   "Collision_LowTent02"   40  40  15
+joint   "Joint_LowTent03"   "Collision_LowTent02"   "Collision_LowTent03"   40  40  15
+joint   "Joint_RClaw"       "Collision_RWrist"      "Collision_RClaw"       0   2   0
+joint   "Joint_RClavicle"   "Collision_Chest"       "Collision_RClavicle"   15  25  10
+joint   "Joint_LClavicle"   "Collision_Chest"       "Collision_LClavicle"   15  25  10
+joint   "Joint_LShoulder"   "Collision_LClavicle"   "Collision_LShoulder"   57  62  10
+joint   "Joint_RShoulder"   "Collision_RClavicle"   "Collision_RShoulder"   57  62  10
+joint   "Joint_RWrist"      "Collision_RForearm"    "Collision_RWrist"      32  68  30
+joint   "Joint_LWrist"      "Collision_LForearm"    "Collision_LWrist"      32  68  30

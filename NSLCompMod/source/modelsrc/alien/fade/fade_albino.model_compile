@@ -1,0 +1,17 @@
+geometry         "fade_albino.dae"
+
+physics
+{
+    default     "fade_physics.dae"
+    damage      "fade_physics.dae"
+}
+
+attach_point	"fade_tongue2"
+attach_point	"babbler_attach1"
+attach_point	"babbler_attach2"
+attach_point	"babbler_attach3"
+attach_point	"babbler_attach4"
+attach_point	"babbler_attach5"
+attach_point	"babbler_attach6"
+
+animation_model	"models/alien/fade/fade.model"

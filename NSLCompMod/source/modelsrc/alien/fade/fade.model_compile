@@ -1,0 +1,165 @@
+geometry         "fade.dae"
+
+physics
+{
+    default     "fade_physics.dae"
+    damage      "fade_physics.dae"
+}
+
+attach_point	"fade_tongue2"
+attach_point	"babbler_attach1"
+attach_point	"babbler_attach2"
+attach_point	"babbler_attach3"
+attach_point	"babbler_attach4"
+attach_point	"babbler_attach5"
+attach_point	"babbler_attach6"
+
+
+animation_node "#hor"
+	blend "body_pitch" -45 45
+	{
+		"fade_FwdAnims.dae" from "lookDown_POSE" to "lookDown_POSE" loop relative_to_start		
+		"fade_FwdAnims.dae" from "lookUp_POSE" to "lookUp_POSE" loop relative_to_start
+		
+	} 
+
+animation_node "#ver"
+	blend "body_yaw" -90 90
+	{
+		"fade_FwdAnims.dae" from "lookLeft_POSE" to "lookLeft_POSE" loop relative_to_start
+		"fade_FwdAnims.dae" from "base_POSE" to "base_POSE" loop relative_to_start
+		"fade_FwdAnims.dae" from "lookRight_POSE" to "lookRight_POSE" loop relative_to_start
+	}
+
+animation_node  "#flinch" 
+	blend "intensity" 0 1
+		{
+			"fade_idles.dae" from "idle1_SFRAME" to "idle1_SFRAME" loop relative_to_start
+			"fade_idles.dae" from "flinch_bigFwd_SFRAME" to "flinch_bigFwd_EFRAME" loop relative_to_start
+		}
+	
+
+animation "idle"
+layer
+	{
+	blend "crouch" 0 1
+		{
+		"fade_idles.dae" from "idle1_SFRAME" to "idle1_EFRAME" loop
+		"fade_crouches.dae" from "crouchIdle_SFRAME" to "crouchIdle_EFRAME" loop
+		} 
+	"#hor" "#ver" "#flinch"
+	}
+
+animation "blend"	"fade_idles.dae" from "idle1_SFRAME" to "idle1_SFRAME" loop relative_to_start
+
+
+animation "run"
+layer
+	{
+	blend "crouch" 0 1
+		{
+		blend "move_speed" 0 1
+			{
+			"fade_idles.dae" from "idle1_SFRAME" to "idle1_EFRAME" loop
+			blend "move_yaw" 0 360 wrap
+				{
+				"fade_FwdAnims.dae" from "runStabL_SFRAME" to "runStabL_EFRAME" loop
+				"fade_FwdAnims.dae" from "runStabF_SFRAME" to "runStabF_EFRAME" loop
+				"fade_FwdAnims.dae" from "runStabR_SFRAME" to "runStabR_EFRAME" loop
+				"fade_FwdAnims.dae" from "runStabB_SFRAME" to "runStabB_EFRAME" loop
+				"fade_FwdAnims.dae" from "runStabL_SFRAME" to "runStabL_EFRAME" loop
+				}
+			}
+		blend "move_speed" 0 .5
+			{
+			"fade_crouches.dae" from "crouchIdle_SFRAME" to "crouchIdle_EFRAME" loop
+			blend "move_yaw" 0 360 wrap
+				{
+				"fade_crouches.dae" from "crouchLft_SFRAME" to "crouchLft_EFRAME" loop
+				"fade_crouches.dae" from "crouchFwd_SFRAME" to "crouchFwd_EFRAME" loop
+				"fade_crouches.dae" from "crouchRght_SFRAME" to "crouchRght_EFRAME" loop
+				"fade_crouches.dae" from "crouchBck_SFRAME" to "crouchBck_EFRAME" loop
+				"fade_crouches.dae" from "crouchLft_SFRAME" to "crouchLft_EFRAME" loop
+				}
+			}
+		}
+	"#hor" "#ver" "#flinch"
+	}
+
+animation		"taunt" 	"fade_idles.dae" from "CineRoar2_SFRAME" to "CineRoar2_EFRAME"
+
+
+animation		"swipe" 	layer { "fade_swipe.dae" from "attack1_SFRAME" to "attack1_EFRAME" speed 1.2 "#hor" "#ver" }
+animation		"swipe2" 	layer { "fade_swipe.dae" from "attack2_SFRAME" to "attack2_EFRAME" speed 1.2 "#hor" "#ver" }
+animation		"vortex"	"fade_specialattack.dae"
+
+animation		"stab2"				"fade_FwdAnims.dae" from "attackStab_SFRAME" to "attackStab_EFRAME"
+animation		"stab"				"fade_FwdAnims.dae" from "attackStab2_SFRAME" to "attackStab2_EFRAME"
+
+animation_node "#jump"
+blend "move_yaw" 0 360 wrap
+		{
+			"fade_FwdAnims.dae" from "jumpLft_POSE" to "jumpLft_POSE" loop relative_to_start
+			"fade_FwdAnims.dae" from "jumpFwd_POSE" to "jumpFwd_POSE" loop relative_to_start
+			"fade_FwdAnims.dae" from "jumpRght_POSE" to "jumpRght_POSE" loop relative_to_start
+			"fade_FwdAnims.dae" from "jumpBck_POSE" to "jumpBck_POSE" loop relative_to_start
+			"fade_FwdAnims.dae" from "jumpLft_POSE" to "jumpLft_POSE" loop relative_to_start
+		}
+
+animation	"test"
+		"fade_FwdAnims.dae" from "base_POSE" to "base_POSE" loop relative_to_start
+
+animation	"jumpin"
+	blend "move_speed" 0 1
+	{		
+		"fade_FwdAnims.dae" from "jumpIn_SFRAME" to "jumpIn_EFRAME"
+		layer {"fade_FwdAnims.dae" from "jumpIn_SFRAME" to "jumpIn_EFRAME" "#jump"}
+	}
+
+animation	"jump" 				
+	blend "move_speed" 0 1
+	{		
+		"fade_FwdAnims.dae" from "jump_SFRAME" to "jump_EFRAME" loop
+		layer {"fade_FwdAnims.dae" from "jump_SFRAME" to "jump_EFRAME" loop "#jump"}
+	}
+
+animation	"jumpout"
+	blend "move_speed" 0 1
+	{		
+		"fade_FwdAnims.dae" from "jumpOut_SFRAME" to "jumpOut_EFRAME"
+		layer {"fade_FwdAnims.dae" from "jumpOut_SFRAME" to "jumpOut_EFRAME" "#jump"}
+	}
+
+animation		"death" 			"fade_death.dae"
+animation		"death_flame" 			"fade_death_flame.dae"
+animation		"blinkout" 			"fade_FwdAnims.dae" from "blinkOut_SFRAME" to "blinkOut_EFRAME"
+animation		"blink" 			"fade_FwdAnims.dae" from "blinkIn_SFRAME" to "blinkIn_SFRAME"
+animation		"blinkin" 			"fade_FwdAnims.dae" from "blinkIn_SFRAME" to "blinkIn_EFRAME"
+
+/*
+animation variats to add
+animation		"swipe_end" 	layer { "fade_swipe.dae" from "attack1_end_SFRAME" to "attack1_end_EFRAME" "#hor" "#ver" }
+animation		"swipe_endbl" 	layer { "fade_swipe.dae" from "attack1_end_SFRAME" to "attack1_end_EFRAME" relative_to_start "#hor" "#ver" }
+
+
+animation		"blinkout2" 			"fade_FwdAnims.dae" from "blinkOut2_SFRAME" to "blinkOut2_EFRAME"
+
+
+animation		"walkF"				"fade_walks.dae" from "walkF_STA" to "walkF_END" loop
+
+animation		"swipe3" 			"fade_swipe.dae" from "attack1high_SFRAME" to "attack1high_EFRAME"
+animation		"swipe4" 			"fade_swipe.dae" from "attack2high_SFRAME" to "attack2high_EFRAME"
+animation		"swipe5" 			"fade_swipe.dae" from "attack1reverse_SFRAME" to "attack1reverse_EFRAME"
+animation		"swipe6" 			"fade_swipe.dae" from "attack2reverse_SFRAME" to "attack2reverse_EFRAME"
+
+animation		"idle2"				"fade_idles.dae" from "idle2_SFRAME" to "idle2_EFRAME" loop
+animation		"idle3"				"fade_idles.dae" from "idle3_SFRAME" to "idle3_EFRAME" loop
+animation		"idle4"				"fade_idles.dae" from "idle4_SFRAME" to "idle4_EFRAME" loop
+animation		"idle5"				"fade_idles.dae" from "fidget1_lookRight_SFRAME" to "fidget1_lookRight_EFRAME"
+animation		"idle6"				"fade_idles.dae" from "fidget3_SFRAME" to "fidget3_EFRAME"
+animation		"idle7"				"fade_idles.dae" from "fidget4_SFRAME" to "fidget4_EFRAME"
+animation		"taunt2" 			"fade_idles.dae" from "taunt1_SFRAME" to "taunt1_EFRAME"
+animation		"taunt3" 			"fade_idles.dae" from "taunt2_SFRAME" to "taunt2_EFRAME"
+animation		"stab2"				"fade_FwdAnims.dae" from "attackStab_SFRAME" to "attackStab_EFRAME"
+animation		"stab"				"fade_FwdAnims.dae" from "attackStab2_SFRAME" to "attackStab2_EFRAME"
+*/

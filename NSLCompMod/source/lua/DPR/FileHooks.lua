@@ -4,7 +4,7 @@ ModLoader.SetupFileHook( "lua/TechData.lua", "lua/DPR/TechData.lua", "replace" )
 ModLoader.SetupFileHook( "lua/Cyst.lua", "lua/DPR/Cyst.lua", "replace" )
 ModLoader.SetupFileHook( "lua/Egg.lua", "lua/DPR/Egg.lua", "replace" )
 ModLoader.SetupFileHook( "lua/Ability.lua", "lua/DPR/Ability.lua", "replace" )
-ModLoader.SetupFileHook( "lua/Shotgun.lua", "lua/DPR/Shotgun.lua", "replace" )
+ModLoader.SetupFileHook( "lua/Shotgun.lua", "lua/DPR/Shotgun.lua", "post" )
 ModLoader.SetupFileHook( "lua/GUIUpgradeChamberDisplay.lua", "lua/DPR/GUIUpgradeChamberDisplay.lua", "replace" )
 
 ModLoader.SetupFileHook( "lua/BalanceMisc.lua", "lua/DPR/BalanceMisc.lua", "post" )

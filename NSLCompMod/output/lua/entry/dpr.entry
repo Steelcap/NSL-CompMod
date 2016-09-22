@@ -1,4 +1,0 @@
-modEntry = {
-	FileHooks = "lua/DPR/FileHooks.lua",
-	Priority = 1
-}

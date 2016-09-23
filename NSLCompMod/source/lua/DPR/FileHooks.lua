@@ -1,3 +1,6 @@
+--This global disables balance changes of the UWE Extensions
+gDisableUWEBalance = true
+
 ModLoader.SetupFileHook( "lua/ResourceTower_Server.lua", "lua/DPR/ResourceTower_Server.lua", "replace" )
 ModLoader.SetupFileHook( "lua/AlienTeam.lua", "lua/DPR/AlienTeam.lua", "replace" )
 ModLoader.SetupFileHook( "lua/TechData.lua", "lua/DPR/TechData.lua", "replace" )

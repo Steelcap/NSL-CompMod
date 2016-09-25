@@ -8,6 +8,7 @@ ModLoader.SetupFileHook( "lua/Cyst.lua", "lua/DPR/Cyst.lua", "replace" )
 ModLoader.SetupFileHook( "lua/Egg.lua", "lua/DPR/Egg.lua", "replace" )
 ModLoader.SetupFileHook( "lua/Ability.lua", "lua/DPR/Ability.lua", "replace" )
 ModLoader.SetupFileHook( "lua/GUIUpgradeChamberDisplay.lua", "lua/DPR/GUIUpgradeChamberDisplay.lua", "replace" )
+ModLoader.SetupFileHook( "lua/NS2ConsoleCommands_Server.lua", "lua/DPR/NS2ConsoleCommands_Server.lua", "replace" )
 
 ModLoader.SetupFileHook( "lua/BalanceMisc.lua", "lua/DPR/BalanceMisc.lua", "post" )
 ModLoader.SetupFileHook( "lua/Balance.lua", "lua/DPR/Balance.lua", "post" )

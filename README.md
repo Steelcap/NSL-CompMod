@@ -4,9 +4,10 @@ This mod is on the Steam Workshop with ID [2ADC73ED](https://steamcommunity.com/
 Maintained by Steelcap.
 
 ## Changes  
-
+### 2016-9-29
+* ***No longer posible to trigger evolution egg without actual changes in evolution***
 ### 2016-9-24  
-* **Increased Mine hp to 40 from 20. Mines now detonate to 5 parasites instead of 3.**
+* Increased Mine hp to 40 from 20. Mines now detonate to 5 parasites instead of 3.
 * Remove alien abilities if required biomass is lost from hive death
 * Machine Gun weight decreased to match shotgun  
 * Boneshield armor regeneration per second reduced to 0  

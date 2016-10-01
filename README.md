@@ -1,12 +1,12 @@
 # NSL-CompMod  
 A balance and feature mod for Natural Selection 2, used by the Natural Selection League. For more information, please visit the [NSL website](http://ensl.org).  
-This mod is on the Steam Workshop with ID [2ADC73ED](https://steamcommunity.com/sharedfiles/filedetails/?id=719090669). The code is available at this [GitHub repo](https://github.com/Steelcap/NSL-CompMod).  
+This mod is on the Steam Workshop with ID [2e135822](https://steamcommunity.com/sharedfiles/filedetails/?id=719090669). The code is available at this [GitHub repo](https://github.com/Steelcap/NSL-CompMod).  
 Maintained by Steelcap.
 
 ## Changes  
 ### 2016-10-1
-* **Shotgun spread dropped by 1000%
-* Shotgun damage per pellet reduced from 10 to 8**
+* **Shotgun spread dropped by 1000%**
+* **Shotgun damage per pellet reduced from 10 to 8**
 * No longer posible to trigger evolution egg without actual changes in evolution
 * Increased Mine hp to 40 from 20. Mines now detonate to 5 parasites instead of 3.
 * Remove alien abilities if required biomass is lost from hive death

@@ -5,8 +5,8 @@ Maintained by Steelcap.
 
 ## Changes  
 ### 2016-10-1
-* ***Shotgun spread dropped by 1000%***
-* ***Shotgun damage per pellet reduced from 10 to 8 ***
+* ***Shotgun spread dropped by 1000%
+* Shotgun damage per pellet reduced from 10 to 8***
 * No longer posible to trigger evolution egg without actual changes in evolution
 * Increased Mine hp to 40 from 20. Mines now detonate to 5 parasites instead of 3.
 * Remove alien abilities if required biomass is lost from hive death

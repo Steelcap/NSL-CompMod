@@ -4,7 +4,7 @@ This mod is on the Steam Workshop with ID [2e135822](https://steamcommunity.com/
 Maintained by Steelcap.
 
 ## Changes  
-* ***change which gorge tunnel will be destroyed by crouching when placed. Crouch destroys newest tunnel instead***
+* ***Change which gorge tunnel will be destroyed by crouching when placed. Crouch destroys newest tunnel instead***
 * ***Rifle spread reduced significantly from 2.8 to .4***
 * Shotgun spread dropped by 1000%
 * Shotgun damage per pellet reduced from 10 to 8

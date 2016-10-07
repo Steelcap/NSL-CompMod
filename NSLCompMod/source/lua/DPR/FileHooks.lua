@@ -19,3 +19,5 @@ ModLoader.SetupFileHook( "lua/Player_Client.lua", "lua/DPR/Player_Client.lua", "
 ModLoader.SetupFileHook( "lua/Alien_Server.lua", "lua/DPR/Alien_Server.lua", "post" )
 ModLoader.SetupFileHook( "lua/Weapons/Marine/Shotgun.lua", "lua/DPR/Shotgun.lua", "post" )
 ModLoader.SetupFileHook( "lua/NS2Utility_Server.lua", "lua/DPR/NS2Utility_Server.lua", "post" )
+ModLoader.SetupFileHook( "lua/Weapons/Marine/Rifle.lua", "lua/DPR/Rifle.lua", "post" )
+ModLoader.SetupFileHook( "lua/Weapons/Alien/DropStructureAbility.lua", "lua/DPR/DropStructureAbility.lua", "post" )

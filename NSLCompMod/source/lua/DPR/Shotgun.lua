@@ -1,4 +1,4 @@
-local kSpreadDistance = 9
+local kSpreadDistance = 50
 Shotgun.kSpreadVectors =
 {
     GetNormalizedVector(Vector(-0.01, 0.01, kSpreadDistance)),

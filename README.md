@@ -4,8 +4,8 @@ This mod is on the Steam Workshop with ID [2e135822](https://steamcommunity.com/
 Maintained by Steelcap.
 
 ## Changes  
-* ** Alternate which gorge tunnel will be destroyed by crouching while it's placed. Crouch destroys newest, not crouch is default behavior (kills oldest) **
-* ** Rifle spread reduced significantly from 2.8 to .4 **
+* *** Alternate which gorge tunnel will be destroyed by crouching while it's placed. Crouch destroys newest tunnel instead of oldest ***
+* *** Rifle spread reduced significantly from 2.8 to .4 ***
 * Shotgun spread dropped by 1000%
 * Shotgun damage per pellet reduced from 10 to 8
 * No longer posible to trigger evolution egg without actual changes in evolution

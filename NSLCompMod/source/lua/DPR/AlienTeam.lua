@@ -213,7 +213,11 @@ function AlienTeam:GetBioMassFraction()
     return self.bioMassFraction
 end
 
-local function RemoveGorgeStructureFromClient(self, techId, clientId)
+function AlienTeam:ClientOwnedStructures()
+	return self.clientOwnedStructures
+end
+
+local function RemoveGorgeStructureFromClient(self, techId, clientId, player)
 
     local structureTypeTable = self.clientOwnedStructures[clientId]
     
@@ -228,15 +232,22 @@ local function RemoveGorgeStructureFromClient(self, techId, clientId)
         
         local removeIndex = 0
         local structure = nil
+		local skip = false
+		if techId == kTechId.GorgeTunnel and player and player:GetCrouching() then
+			Print("skipping oldest")
+			skip = true
+		end
         for index, id in ipairs(structureTypeTable[techId])  do
         
-            if id then
+            if id and not skip then
             
                 removeIndex = index
                 structure = Shared.GetEntity(id)
                 break
                 
-            end
+            else
+				skip = false
+			end
             
         end
         
@@ -255,6 +266,7 @@ local function RemoveGorgeStructureFromClient(self, techId, clientId)
     end
     
 end
+
 
 local function ApplyGorgeStructureTheme(structure, player)
 
@@ -291,7 +303,7 @@ function AlienTeam:AddGorgeStructure(player, structure)
         local numAllowedStructure = LookupTechData(techId, kTechDataMaxAmount, -1) --* self:GetNumHives()
         
         if numAllowedStructure >= 0 and table.count(structureTypeTable[techId]) > numAllowedStructure then
-            RemoveGorgeStructureFromClient(self, techId, clientId)
+            RemoveGorgeStructureFromClient(self, techId, clientId, player)
         end
         
     end

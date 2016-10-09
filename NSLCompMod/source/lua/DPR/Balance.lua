@@ -8,5 +8,4 @@ kAlienInitialIndivRes = 15
 kMarineInitialIndivRes = 20
 kPlayerResPerInterval = 0.1 -- was 1.25, but players now also get res while dead
 
-kShotgunDamage = 8
 kMineDamage = 140

@@ -23,3 +23,4 @@ ModLoader.SetupFileHook( "lua/Weapons/Marine/Shotgun.lua", "lua/DPR/Shotgun.lua"
 ModLoader.SetupFileHook( "lua/NS2Utility_Server.lua", "lua/DPR/NS2Utility_Server.lua", "post" )
 ModLoader.SetupFileHook( "lua/Weapons/Marine/Rifle.lua", "lua/DPR/Rifle.lua", "post" )
 ModLoader.SetupFileHook( "lua/TunnelEntrance.lua", "lua/DPR/TunnelEntrance.lua", "post" )
+ModLoader.SetupFileHook( "lua/Alien.lua", "lua/DPR/Alien.lua", "post" )

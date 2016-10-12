@@ -9,6 +9,7 @@ ModLoader.SetupFileHook( "lua/Egg.lua", "lua/DPR/Egg.lua", "replace" )
 ModLoader.SetupFileHook( "lua/Weapons/Alien/Ability.lua", "lua/DPR/Ability.lua", "replace" )
 ModLoader.SetupFileHook( "lua/GUIUpgradeChamberDisplay.lua", "lua/DPR/GUIUpgradeChamberDisplay.lua", "replace" )
 ModLoader.SetupFileHook( "lua/Hud/Commander/AlienGhostModel.lua", "lua/DPR/AlienGhostModel.lua", "replace" )
+ModLoader.SetupFileHook( "lua/Lerk.lua", "lua/DPR/Lerk.lua", "replace")
 
 ModLoader.SetupFileHook( "lua/GhostModelUI.lua", "lua/DPR/GhostModelUI.lua", "post" )
 ModLoader.SetupFileHook( "lua/BalanceMisc.lua", "lua/DPR/BalanceMisc.lua", "post" )

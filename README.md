@@ -10,6 +10,8 @@ Maintained by Steelcap.
 * P-Res rate for all players decreased to 0.1 from 0.125  
 
 ###### Aliens  
+* **Reduced base Lerk armor by 15, from 55 to 40** 
+* **Reduced contribution of carapace for Lerk at max level from 70 to 49**
 * Starting P-Res for Aliens increased to 15 from 12  
 * Removed Focus  
 * Silence moved to Shade Hive from Shift Hive   
@@ -29,7 +31,6 @@ Maintained by Steelcap.
 * Gorge air friction reduced to 0.12 from 0.8  
 * Gorge air control increased to 30 from 8  
 * Lerk P-Res cost increased to 20 from 18  
-* Increased Lerk armor from to 55 from 45  
 * Nerfed crush effectiveness on Lerk Spikes to 4.5% from 7%  
 * Fade hitbox changes reverted, hitbox is now smaller  
 * Boneshield armor regeneration per second reduced to 0  

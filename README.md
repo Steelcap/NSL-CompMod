@@ -11,6 +11,7 @@ Maintained by Steelcap.
 ###### Aliens  
 * Starting P-Res for Aliens increased to 15 from 12  
 * Removed Focus  
+* Onos cost 55 P-Res
 * Silence moved to Shade Hive from Shift Hive   
 * Disabled Regeneration within 3 seconds of taking damage  
 * No longer posible to trigger evolution egg without actual changes in evolution  

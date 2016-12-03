@@ -234,7 +234,6 @@ local function RemoveGorgeStructureFromClient(self, techId, clientId, player)
         local structure = nil
 		local skip = false
 		if techId == kTechId.GorgeTunnel and player and player:GetCrouching() then
-			Print("skipping oldest")
 			skip = true
 		end
         for index, id in ipairs(structureTypeTable[techId])  do

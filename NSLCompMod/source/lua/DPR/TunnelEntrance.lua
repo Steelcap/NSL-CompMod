@@ -192,7 +192,6 @@ function TunnelEntrance:OnInitialized()
         
         self.onNormalInfestation = false
         --self:AddTimedCallback(UpdateInfestationStatus, 1)
-		Print("New Tunnel Code is In")
         self:UpdateIncludeRelevancyMask()
 		
     elseif Client then

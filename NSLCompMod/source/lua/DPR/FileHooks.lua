@@ -5,6 +5,7 @@ gDisableUWEBalance = true
 ModLoader.SetupFileHook( "lua/AlienTeam.lua", "lua/DPR/AlienTeam.lua", "replace" )
 ModLoader.SetupFileHook( "lua/Cyst.lua", "lua/DPR/Cyst.lua", "replace" )
 ModLoader.SetupFileHook( "lua/Egg.lua", "lua/DPR/Egg.lua", "replace" )
+ModLoader.SetupFileHook( "lua/GUIScoreboard.lua", "lua/DPR/GUIScoreboard.lua", "replace" )
 ModLoader.SetupFileHook( "lua/GUIUpgradeChamberDisplay.lua", "lua/DPR/GUIUpgradeChamberDisplay.lua", "replace" )
 ModLoader.SetupFileHook( "lua/Hud/Commander/AlienGhostModel.lua", "lua/DPR/AlienGhostModel.lua", "replace" )
 ModLoader.SetupFileHook( "lua/ResourceTower_Server.lua", "lua/DPR/ResourceTower_Server.lua", "replace" )

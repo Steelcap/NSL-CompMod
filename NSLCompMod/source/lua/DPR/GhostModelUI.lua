@@ -1,5 +1,5 @@
 
-function GhostModelUI_GetTunnelName()
+function NewGhostModelUI_GetTunnelName()
 	
 	local player = Client.GetLocalPlayer()
 
@@ -9,7 +9,7 @@ function GhostModelUI_GetTunnelName()
     return ""
 end
 
-function OldGhostModelUI_GetTunnelName()
+function GhostModelUI_GetTunnelName()
 	
 	local player = Client.GetLocalPlayer()
 

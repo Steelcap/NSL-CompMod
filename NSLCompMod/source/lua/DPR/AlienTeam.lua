@@ -910,7 +910,7 @@ function AlienTeam:InitTechTree()
     
     -- lerk researches
     self.techTree:AddResearchNode(kTechId.Umbra,               kTechId.BioMassFive, kTechId.None, kTechId.AllAliens) 
-    self.techTree:AddResearchNode(kTechId.Spores,              kTechId.BioMassFour, kTechId.None, kTechId.AllAliens)
+    self.techTree:AddResearchNode(kTechId.Spores,              kTechId.BioMassSeven, kTechId.None, kTechId.AllAliens)
     
     -- fade researches
     self.techTree:AddResearchNode(kTechId.MetabolizeEnergy,        kTechId.BioMassThree, kTechId.None, kTechId.AllAliens) 

@@ -1,6 +1,9 @@
+kSporesDustDamagePerSecond = 17
+
 kBoneShieldArmorPerSecond = 0
 kBoneShieldDamageReduction = 0.75
 kBoneShieldCooldown = 6.25
+
 kOnosCost = 55
 kLerkCost = 20
 

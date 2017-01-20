@@ -22,6 +22,7 @@ ModLoader.SetupFileHook( "lua/BalanceMisc.lua", "lua/DPR/BalanceMisc.lua", "post
 ModLoader.SetupFileHook( "lua/DamageTypes.lua", "lua/DPR/DamageTypes.lua", "post" )
 ModLoader.SetupFileHook( "lua/GhostModelUI.lua", "lua/DPR/GhostModelUI.lua", "post" )
 ModLoader.SetupFileHook( "lua/Gorge.lua", "lua/DPR/Gorge.lua", "post" )
+ModLoader.SetupFileHook( "lua/NS2Gamerules.lua", "lua/DPR/NS2Gamerules.lua", "post")
 ModLoader.SetupFileHook( "lua/NS2Utility_Server.lua", "lua/DPR/NS2Utility_Server.lua", "post" )
 ModLoader.SetupFileHook( "lua/Player_Client.lua", "lua/DPR/Player_Client.lua", "post" )
 ModLoader.SetupFileHook( "lua/Weapons/Marine/Shotgun.lua", "lua/DPR/Shotgun.lua", "post" )

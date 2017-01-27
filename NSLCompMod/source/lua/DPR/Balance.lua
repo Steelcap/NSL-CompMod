@@ -9,3 +9,5 @@ kMarineInitialIndivRes = 20
 kPlayerResPerInterval = 0.1 -- was 1.25, but players now also get res while dead
 
 kMineDamage = 140
+
+kMucousShieldPercent = 0.15

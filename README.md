@@ -47,7 +47,9 @@ Maintained by Steelcap.
 * **Increased Mine hp to 70 from 20**  
 * Mine damage increased to 140 from 125  
 * Machine Gun weight decreased to match shotgun  
+* **Jetpack cost increased to 20 from 15**  
 * **Removed lockout timer for entering exos bought by teammates**  
+* **Catalyst pack cost decreased to 2 from 3**  
   
 ### 2017-1-19 
 * Removed floating health bars on players  

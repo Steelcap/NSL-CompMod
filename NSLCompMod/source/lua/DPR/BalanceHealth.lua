@@ -5,4 +5,4 @@ kMinMatureCystHealth = 180 kMinCystScalingDistance = 1 kMaxCystScalingDistance =
 kLerkHealth = 125    kLerkArmor = 45    kLerkHealthPerBioMass = 3
 kLerkArmorFullyUpgradedAmount = 60
 
-kMineHealth = 40 kMineArmor = 5
+kMineHealth = 70 kMineArmor = 5

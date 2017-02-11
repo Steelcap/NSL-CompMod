@@ -15,3 +15,7 @@ kMucousShieldPercent = 0.15
 kContaminationBileSpewCount = 1
 
 kSporeDustDamagePerSecond = 20
+
+kCatPackCost = 2
+
+kJetPackCost = 15

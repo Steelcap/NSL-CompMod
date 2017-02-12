@@ -18,5 +18,5 @@ kSporeDustDamagePerSecond = 20
 
 kCatPackCost = 2
 
-kJetPackCost = 20
-kJetPackDropCost = 20
+kJetpackCost = 20
+kJetpackDropCost = 20

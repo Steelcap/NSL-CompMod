@@ -19,7 +19,6 @@ Maintained by Steelcap.
 * No longer posible to trigger evolution egg without actual changes in evolution  
 * Remove alien abilities if required biomass is lost from hive death  
 * Soft cap on all alien healing over 16% per second, reducing effectiveness by 80%  
-* Rupture moved to Biomass 4  
 * Nutrient Mist requires infestation to place  
 * Nutrient Mist no longer preserves structures off infestation  
 * Cysts will be damaged while unconnected  

@@ -20,3 +20,5 @@ kCatPackCost = 2
 
 kJetpackCost = 20
 kJetpackDropCost = 20
+
+kCatPackDuration = 8

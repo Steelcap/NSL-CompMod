@@ -73,7 +73,7 @@ Maintained by Steelcap.
 * Cyst maturation rate reduced to 10 from 45  
 * Removed the ability to drop lifeform eggs   
 * Skulks do not gain health from biomass after biomass 4 (84 hp)  
-* Gorges can now control which tunnel will be replaced when they place their third tunnel by crouching while placing it**  
+* Gorges can now control which tunnel will be replaced when they place their third tunnel by crouching while placing it  
 * **Gorge air friction reduced, and now depends on velocity**  
 * Gorge air control increased to 30 from 8  
 * Gorge belly slide friction off-infestation increased to 0.2 from 0.1
@@ -120,7 +120,7 @@ Maintained by Steelcap.
 * Cyst maturation rate reduced to 10 from 45  
 * Removed the ability to drop lifeform eggs   
 * Skulks do not gain health from biomass after biomass 4 (84 hp)  
-* Gorges can now control which tunnel will be replaced when they place their third tunnel by crouching while placing it**  
+* Gorges can now control which tunnel will be replaced when they place their third tunnel by crouching while placing it  
 * Gorge air friction reduced to 0.12 from 0.8  
 * Gorge air control increased to 30 from 8  
 * Gorge belly slide friction off-infestation increased to 0.2 from 0.1
@@ -160,7 +160,7 @@ Maintained by Steelcap.
 * Cyst maturation rate reduced to 10 from 45  
 * Removed the ability to drop lifeform eggs   
 * Skulks do not gain health from biomass after biomass 4 (84 hp)  
-* Gorges can now control which tunnel will be replaced when they place their third tunnel by crouching while placing it**  
+* Gorges can now control which tunnel will be replaced when they place their third tunnel by crouching while placing it  
 * Gorge air friction reduced to 0.12 from 0.8  
 * Gorge air control increased to 30 from 8  
 * Gorge belly slide friction off-infestation increased to 0.2 from 0.1
@@ -199,7 +199,7 @@ Maintained by Steelcap.
 * Cyst maturation rate reduced to 10 from 45  
 * Removed the ability to drop lifeform eggs   
 * Skulks do not gain health from biomass after biomass 4 (84 hp)  
-* Gorges can now control which tunnel will be replaced when they place their third tunnel by crouching while placing it**  
+* Gorges can now control which tunnel will be replaced when they place their third tunnel by crouching while placing it  
 * Gorge air friction reduced to 0.12 from 0.8  
 * Gorge air control increased to 30 from 8  
 * Gorge belly slide friction off-infestation increased to 0.2 from 0.1
@@ -237,7 +237,7 @@ Maintained by Steelcap.
 * Cyst maturation rate reduced to 10 from 45  
 * Removed the ability to drop lifeform eggs   
 * Skulks do not gain health from biomass after biomass 4 (84 hp)  
-* Gorges can now control which tunnel will be replaced when they place their third tunnel by crouching while placing it**  
+* Gorges can now control which tunnel will be replaced when they place their third tunnel by crouching while placing it  
 * Gorge air friction reduced to 0.12 from 0.8  
 * Gorge air control increased to 30 from 8  
 * **Gorge belly slide friction off-infestation increased to 0.2 from 0.1**  

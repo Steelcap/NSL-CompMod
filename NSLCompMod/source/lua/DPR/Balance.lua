@@ -16,9 +16,9 @@ kContaminationBileSpewCount = 1
 
 kSporeDustDamagePerSecond = 20
 
-kCatPackCost = 2
+kCatPackCost = 3
 
 kJetpackCost = 20
 kJetpackDropCost = 20
 
-kCatPackDuration = 8
+kCatPackDuration = 12

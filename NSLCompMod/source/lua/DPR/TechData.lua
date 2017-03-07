@@ -471,7 +471,7 @@ function BuildTechData()
         { [kTechDataId] = kTechId.GrenadeLauncher,    [kTechDataMaxHealth] = kMarineWeaponHealth,  [kTechDataPointValue] = kGrenadeLauncherPointValue, [kTechDataMapName] = GrenadeLauncher.kMapName,          [kTechDataDisplayName] = "GRENADE_LAUNCHER",  [kTechDataTooltipInfo] = "GRENADE_LAUNCHER_TOOLTIP",   [kTechDataModel] = GrenadeLauncher.kModelName,   [kTechDataDamageType] = kRifleDamageType,    [kTechDataCostKey] = kGrenadeLauncherCost, [kStructureAttachId] = kTechId.Armory, [kStructureAttachRange] = kArmoryWeaponAttachRange, [kStructureAttachRequiresPower] = true},
 
         { [kTechDataId] = kTechId.DropShotgun,   [kTechDataMapName] = Shotgun.kMapName, [kTechDataDisplayName] = "SHOTGUN", [kTechIDShowEnables] = false,  [kTechDataTooltipInfo] =  "SHOTGUN_TOOLTIP", [kTechDataModel] = Shotgun.kModelName, [kTechDataCostKey] = kShotgunDropCost, [kStructureAttachId] = { kTechId.Armory, kTechId.AdvancedArmory }, [kStructureAttachRange] = kArmoryWeaponAttachRange, [kStructureAttachRequiresPower] = true },
-        { [kTechDataId] = kTechId.DropHeavyMachineGun,   [kTechDataMapName] = HeavyMachineGun.kMapName, [kTechDataDisplayName] = "HeavyMachineGun", [kTechIDShowEnables] = false,  [kTechDataTooltipInfo] =  "HEAVYMACHINEGUN_TOOLTIP", [kTechDataModel] = HeavyMachineGun.kModelName, [kTechDataCostKey] = kHeavyMachineGunDropCost, [kStructureAttachId] = { kTechId.Armory, kTechId.AdvancedArmory }, [kStructureAttachRange] = kArmoryWeaponAttachRange, [kStructureAttachRequiresPower] = true },
+        { [kTechDataId] = kTechId.DropHeavyMachineGun,   [kTechDataMapName] = HeavyMachineGun.kMapName, [kTechDataDisplayName] = "HEAVY_MACHINE_GUN", [kTechIDShowEnables] = false,  [kTechDataTooltipInfo] =  "HEAVY_MACHINE_GUN_TOOLTIP", [kTechDataModel] = HeavyMachineGun.kModelName, [kTechDataCostKey] = kHeavyMachineGunDropCost, [kStructureAttachId] = { kTechId.Armory, kTechId.AdvancedArmory }, [kStructureAttachRange] = kArmoryWeaponAttachRange, [kStructureAttachRequiresPower] = true },
         { [kTechDataId] = kTechId.DropWelder,    [kTechDataMapName] = Welder.kMapName, [kTechDataDisplayName] = "WELDER", [kTechIDShowEnables] = false, [kTechDataTooltipInfo] =  "WELDER_TOOLTIP", [kTechDataModel] = Welder.kModelName, [kTechDataCostKey] = kWelderDropCost, [kStructureAttachId] = { kTechId.Armory, kTechId.AdvancedArmory }, [kStructureAttachRange] = kArmoryWeaponAttachRange, [kStructureAttachRequiresPower] = true },
         {
             [kTechDataId] = kTechId.DropMines,
@@ -479,7 +479,7 @@ function BuildTechData()
             [kTechDataDisplayName] = "MINE",
             [kTechIDShowEnables] = false,
             [kTechDataTooltipInfo] =  "MINE_TOOLTIP",
-            [kTechDataModel] = Mine.kModelName,
+            [kTechDataModel] = LayMines.kDropModelName,
             [kTechDataCostKey] = kDropMineCost,
             [kStructureAttachId] = { kTechId.Armory, kTechId.AdvancedArmory },
             [kStructureAttachRange] = kArmoryWeaponAttachRange,
@@ -1234,20 +1234,20 @@ function GetCachedTechData(techId, fieldName)
     
 end
 
-function SetCachedTechData(techId, fieldName, data)
+function SetCachedTechData(techId, fieldName, data, force)
 
     local inserted = false
     
     local entry = cachedTechData[fieldName]
     
-    if entry == nil then
+    if force or entry == nil then
     
         cachedTechData[fieldName] = {}
         entry = cachedTechData[fieldName]
         
     end
     
-    if entry[techId] == nil then
+    if force or entry[techId] == nil then
     
         entry[techId] = data
         inserted = true

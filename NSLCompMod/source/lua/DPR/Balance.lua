@@ -22,3 +22,8 @@ kJetpackCost = 20
 kJetpackDropCost = 20
 
 kCatPackDuration = 12
+
+kPowerSurgeCost = 3
+kPowerSurgeDamage = 0
+kPowerSurgeDamageRadius = 0
+kPowerSurgeElectrifiedDuration = 0

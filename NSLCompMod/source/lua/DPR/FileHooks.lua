@@ -28,3 +28,4 @@ ModLoader.SetupFileHook( "lua/Player_Client.lua", "lua/DPR/Player_Client.lua", "
 ModLoader.SetupFileHook( "lua/TunnelEntrance.lua", "lua/DPR/TunnelEntrance.lua", "post" )
 ModLoader.SetupFileHook( "lua/Weapons/Alien/Metabolize.lua", "lua/DPR/Metabolize.lua", "post" )
 ModLoader.SetupFileHook( "lua/Weapons/Marine/Shotgun.lua", "lua/DPR/Shotgun.lua", "post" )
+ModLoader.SetupFileHook( "lua/MarineTeam.lua", "lua/DPR/MarineTeam.lua", "post" )

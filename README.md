@@ -29,7 +29,8 @@ Maintained by Steelcap.
 * Gorges can now control which tunnel will be replaced when they place their third tunnel by crouching while placing it  
 * Gorge air friction reduced, and now depends on velocity  
 * Gorge air control increased to 30 from 8  
-* Gorge belly slide friction off-infestation increased to 0.2 from 0.1
+* Gorge belly slide friction off-infestation increased to 0.2 from 0.1  
+* **Reverted Lerk HP changes to vanilla**  
 * Lerk P-Res cost increased to 20 from 18  
 * Nerfed crush effectiveness on Lerk Spikes to 4.5% from 7%  
 * Lerk spores moved to Biomass 7 from Biomass 4  
@@ -39,25 +40,21 @@ Maintained by Steelcap.
 * Boneshield armor regeneration per second reduced to 0  
 * Boneshield damage reduction increased to 75%  
 * Boneshield cooldown reduced to 6.25 seconds  
-* ** Reverted Lerk HP changes to vanilla **
 
 ###### Marines  
 * Starting P-Res for Marines increased to 20 from 15  
-
+* **Weapon Pickup time decreased to 22 seconds from 25**  
 * Increased Mine hp to 70 from 20  
 * Mine damage increased to 140 from 125  
 * Machine Gun weight decreased to match shotgun  
+* **Reverted Shotgun spread changes to vanilla**  
 * Jetpack cost increased to 20 from 15  
-* Removed lockout timer for entering exos bought by teammates  
-* Reverted Catalyst pack cost back to 3 from 2  
-* Reverted Catalyst pack effect duration back to 12 from 8
-* Removed secondary effects of PowerSurge (Damage and AttackSlow)
-* Reduced cost of PowerSurge from 5 to 3
-* Removed PowerSurge research, PowerSurge now requires powered Robotics Factory
-* ** Weapon Pickup time down to 22 seconds from 25 ** 
-* ** Reverted Shotgun spread changes to vanilla **
+* Removed lockout timer for entering exos bought by teammates   
+* Removed secondary effects of PowerSurge (Damage and AttackSlow)  
+* Reduced cost of PowerSurge from 5 to 3  
+* Removed PowerSurge research, PowerSurge now requires powered Robotics Factory  
 
-### 2017-2-26 
+### 2017-3-12 
 * Removed floating health bars on players  
 * P-Res rate for all players decreased to 0.1 from 0.125  
 * Disallowed seeing who is enemy commander in pregame  
@@ -103,9 +100,9 @@ Maintained by Steelcap.
 * Removed lockout timer for entering exos bought by teammates  
 * Reverted Catalyst pack cost back to 3 from 2  
 * Reverted Catalyst pack effect duration back to 12 from 8
-* ** Removed secondary effects of PowerSurge (Damage and AttackSlow) **
-* ** Reduced cost of PowerSurge from 5 to 3 **
-* ** Removed PowerSurge research, PowerSurge now requires powered Robotics Factory **
+* **Removed secondary effects of PowerSurge (Damage and AttackSlow)**  
+* **Reduced cost of PowerSurge from 5 to 3**  
+* **Removed PowerSurge research, PowerSurge now requires powered Robotics Factory**  
 
 ### 2017-2-26 
 * Removed floating health bars on players  
@@ -151,8 +148,8 @@ Maintained by Steelcap.
 * Machine Gun weight decreased to match shotgun  
 * Jetpack cost increased to 20 from 15  
 * Removed lockout timer for entering exos bought by teammates  
-* ** Reverted Catalyst pack cost back to 3 from 2  
-* ** Reverted Catalyst pack effect duration back to 12 from 8**
+* **Reverted Catalyst pack cost back to 3 from 2**  
+* **Reverted Catalyst pack effect duration back to 12 from 8**  
 
 ### 2017-2-18 
 * Removed floating health bars on players  

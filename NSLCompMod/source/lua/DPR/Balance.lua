@@ -27,3 +27,8 @@ kPowerSurgeCost = 3
 kPowerSurgeDamage = 0
 kPowerSurgeDamageRadius = 0
 kPowerSurgeElectrifiedDuration = 0
+
+kHeavyMachineGunCost = 25
+
+kHeavyMachineGunDamage = 6
+kHeavyMachineGunDamageType = kDamageType.Puncture

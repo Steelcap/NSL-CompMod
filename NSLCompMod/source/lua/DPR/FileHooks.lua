@@ -9,6 +9,7 @@ ModLoader.SetupFileHook( "lua/Hud/Commander/AlienGhostModel.lua", "lua/DPR/Alien
 ModLoader.SetupFileHook( "lua/ResourceTower_Server.lua", "lua/DPR/ResourceTower_Server.lua", "replace" )
 ModLoader.SetupFileHook( "lua/TechData.lua", "lua/DPR/TechData.lua", "replace" )
 ModLoader.SetupFileHook( "lua/Weapons/Alien/Ability.lua", "lua/DPR/Ability.lua", "replace" )
+ModLoader.SetupFileHook( "lua/Weapons/Alien/BoneShield.lua", "lua/DPR/BoneShield.lua", "replace" )
 
 ModLoader.SetupFileHook( "lua/Alien.lua", "lua/DPR/Alien.lua", "post" )
 ModLoader.SetupFileHook( "lua/AlienTechMap.lua", "lua/DPR/AlienTechMap.lua", "post" )
@@ -28,3 +29,4 @@ ModLoader.SetupFileHook( "lua/Weapons/Alien/Metabolize.lua", "lua/DPR/Metabolize
 ModLoader.SetupFileHook( "lua/MarineTeam.lua", "lua/DPR/MarineTeam.lua", "post" )
 ModLoader.SetupFileHook( "lua/GUIUpgradeChamberDisplay.lua", "lua/DPR/GUIUpgradeChamberDisplay.lua", "post" )
 ModLoader.SetupFileHook( "lua/GUIScoreboard.lua", "lua/DPR/GUIScoreboard.lua", "post" )
+ModLoader.SetupFileHook( "lua/Onos.lua", "lua/DPR/Onos.lua", "post" )

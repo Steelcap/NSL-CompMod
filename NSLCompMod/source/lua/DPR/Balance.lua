@@ -1,8 +1,21 @@
 kBoneShieldArmorPerSecond = 0
 kBoneShieldDamageReduction = 0.75
 kBoneShieldCooldown = 6.25
+kBoneShieldMoveFraction = 0.0
+kBoneShieldInitialEnergyCost = 0.0
+kBoneShieldInnateCombatRegenRate = 1
+kBoneshieldPreventInnateRegen = false
+kBoneShieldPreventEnergize = false
+kBoneShieldPreventRecuperation = false
+kBoneShieldHealPerSecond = 0
+kBoneShieldMaxDuration = 4
+kBoneShieldMinimumFuel = 0.9 -- otherwise you can trigger it for a frame and it feels bad
+
+kAutoBuildRate = 0.3
+
 kOnosCost = 55
 kLerkCost = 20
+kFadeCost = 35
 
 kAlienInitialIndivRes = 15
 kMarineInitialIndivRes = 20

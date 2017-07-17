@@ -6,3 +6,5 @@ kCystMaturationTime = 10
 kAlienRegenerationCombatModifier = 0
 kAlienHealRatePercentLimit = .16
 kAlienHealRateOverLimitReduction = .2
+
+kWeaponStayTime = 22

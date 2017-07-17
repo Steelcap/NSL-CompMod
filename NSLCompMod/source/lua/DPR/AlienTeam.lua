@@ -762,7 +762,7 @@ function AlienTeam:InitTechTree()
     -- Commander abilities
     self.techTree:AddBuildNode(kTechId.Cyst)
     self.techTree:AddBuildNode(kTechId.NutrientMist)
-    self.techTree:AddBuildNode(kTechId.Rupture, kTechId.BioMassFour)
+    self.techTree:AddBuildNode(kTechId.Rupture, kTechId.BioMassTwo)
     self.techTree:AddBuildNode(kTechId.BoneWall, kTechId.BioMassThree)
     self.techTree:AddBuildNode(kTechId.Contamination, kTechId.BioMassNine)
     self.techTree:AddAction(kTechId.SelectDrifter)

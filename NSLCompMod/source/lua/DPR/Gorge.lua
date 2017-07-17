@@ -1,5 +1,6 @@
 function Gorge:GetAirFriction()
-    return 0.12
+    local speedFraction = self:GetVelocity():GetLengthXZ() / self:GetMaxSpeed()
+    return math.max(0.15 * speedFraction, 0.12)
 end
 
 function Gorge:GetAirControl()

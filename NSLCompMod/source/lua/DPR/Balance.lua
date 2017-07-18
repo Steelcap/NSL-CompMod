@@ -46,4 +46,4 @@ kHeavyMachineGunCost = 25
 kHeavyMachineGunDamage = 6
 kHeavyMachineGunDamageType = kDamageType.Puncture
 
-kWebbParasiteDuration = 0
+kWebbedParasiteDuration = 0

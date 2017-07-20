@@ -30,7 +30,7 @@ end
 if Server then
 
 	function TunnelEntrance:UpdateIncludeRelevancyMask()
-		includeMask = Math.infinity
+		local includeMask = Math.infinity
 		self:SetIncludeRelevancyMask(includeMask)
 	end
 

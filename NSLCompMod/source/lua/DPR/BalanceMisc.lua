@@ -8,3 +8,5 @@ kAlienHealRatePercentLimit = .16
 kAlienHealRateOverLimitReduction = .2
 
 kWeaponStayTime = 22
+
+kShotgunSpreadDistance = 10

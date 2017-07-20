@@ -30,3 +30,5 @@ ModLoader.SetupFileHook( "lua/MarineTeam.lua", "lua/DPR/MarineTeam.lua", "post" 
 ModLoader.SetupFileHook( "lua/GUIUpgradeChamberDisplay.lua", "lua/DPR/GUIUpgradeChamberDisplay.lua", "post" )
 ModLoader.SetupFileHook( "lua/GUIScoreboard.lua", "lua/DPR/GUIScoreboard.lua", "post" )
 ModLoader.SetupFileHook( "lua/Onos.lua", "lua/DPR/Onos.lua", "post" )
+ModLoader.SetupFileHook( "lua/Weapons/Alien/BiteLeap.lua", "lua/DPR/BiteLeap.lua", "post" )
+ModLoader.SetupFileHook( "lua/Weapons/Alien/SwipeBlink.lua", "lua/DPR/SwipeBlink.lua", "post" )

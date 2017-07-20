@@ -41,9 +41,9 @@ kPowerSurgeDamage = 0
 kPowerSurgeDamageRadius = 0
 kPowerSurgeElectrifiedDuration = 0
 
-kHeavyMachineGunCost = 25
+kHeavyMachineGunCost = 20
 
 kHeavyMachineGunDamage = 6
 kHeavyMachineGunDamageType = kDamageType.Puncture
 
-kWebbedParasiteDuration = 0
+kWebbParasiteDuration = 0

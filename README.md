@@ -36,6 +36,8 @@ Maintained by Steelcap.
 * Gorge air control increased to 30 from 8  
 * Gorge belly slide friction off-infestation increased to 0.2 from 0.1  
 * **Clog health decreased to 180 from 250**  
+* **Babblers take all damage from source, increased from max of 5**  
+* **Babbler health increased to 11 from 10**  
 * **Removed parasite ability from Webs**  
 * Lerk P-Res cost increased to 20 from 18  
 * **Lerk hitbox changes reverted, hitbox is now smaller**  

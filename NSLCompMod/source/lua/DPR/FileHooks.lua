@@ -10,7 +10,9 @@ ModLoader.SetupFileHook( "lua/ResourceTower_Server.lua", "lua/DPR/ResourceTower_
 ModLoader.SetupFileHook( "lua/TechData.lua", "lua/DPR/TechData.lua", "replace" )
 ModLoader.SetupFileHook( "lua/Weapons/Alien/Ability.lua", "lua/DPR/Ability.lua", "replace" )
 ModLoader.SetupFileHook( "lua/Weapons/Alien/BoneShield.lua", "lua/DPR/BoneShield.lua", "replace" )
+ModLoader.SetupFileHook( "lua/Lerk.lua", "lua/DPR/Lerk.lua", "replace" )
 
+ModLoader.SetupFileHook( "lua/Skulk.lua", "lua/DPR/Skulk.lua", "post" )
 ModLoader.SetupFileHook( "lua/Alien.lua", "lua/DPR/Alien.lua", "post" )
 ModLoader.SetupFileHook( "lua/AlienTechMap.lua", "lua/DPR/AlienTechMap.lua", "post" )
 ModLoader.SetupFileHook( "lua/Alien_Server.lua", "lua/DPR/Alien_Server.lua", "post" )

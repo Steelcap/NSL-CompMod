@@ -8,3 +8,5 @@ kMedpackHeal = 50
 kMarineRegenerationHeal = 0
 
 kClogHealth = 180
+
+kBabblerHealth = 11

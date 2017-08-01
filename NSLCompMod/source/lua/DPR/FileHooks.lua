@@ -28,6 +28,7 @@ ModLoader.SetupFileHook( "lua/NS2Gamerules.lua", "lua/DPR/NS2Gamerules.lua", "po
 ModLoader.SetupFileHook( "lua/NS2Utility_Server.lua", "lua/DPR/NS2Utility_Server.lua", "post" )
 ModLoader.SetupFileHook( "lua/Player_Client.lua", "lua/DPR/Player_Client.lua", "post" )
 ModLoader.SetupFileHook( "lua/TunnelEntrance.lua", "lua/DPR/TunnelEntrance.lua", "post" )
+ModLoader.SetupFileHook( "lua/Weapons/Alien/Web.lua", "lua/DPR/Web.lua", "post" )
 ModLoader.SetupFileHook( "lua/Weapons/Alien/Metabolize.lua", "lua/DPR/Metabolize.lua", "post" )
 ModLoader.SetupFileHook( "lua/MarineTeam.lua", "lua/DPR/MarineTeam.lua", "post" )
 ModLoader.SetupFileHook( "lua/GUIUpgradeChamberDisplay.lua", "lua/DPR/GUIUpgradeChamberDisplay.lua", "post" )

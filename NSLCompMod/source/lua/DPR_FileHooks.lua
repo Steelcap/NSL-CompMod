@@ -1,6 +1,3 @@
---This global disables balance changes of the UWE Extensions
-gDisableUWEBalance = true
-
 local function GetVanillaPath(DPRPath)
     DPRPath = string.gsub(DPRPath, "DPR/Replace/", "")
     DPRPath = string.gsub(DPRPath, "DPR/Post/", "")

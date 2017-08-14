@@ -35,3 +35,6 @@ ModLoader.SetupFileHook( "lua/GUIScoreboard.lua", "lua/DPR/GUIScoreboard.lua", "
 ModLoader.SetupFileHook( "lua/Onos.lua", "lua/DPR/Onos.lua", "post" )
 ModLoader.SetupFileHook( "lua/Weapons/Alien/BiteLeap.lua", "lua/DPR/BiteLeap.lua", "post" )
 ModLoader.SetupFileHook( "lua/Weapons/Alien/SwipeBlink.lua", "lua/DPR/SwipeBlink.lua", "post" )
+ModLoader.SetupFileHook( "lua/Weapons/Alien/SpitSpray.lua", "lua/DPR/SpitSpray.lua", "post" )
+ModLoader.SetupFileHook( "lua/Weapons/Alien/LerkBite.lua", "lua/DPR/LerkBite.lua", "post" )
+ModLoader.SetupFileHook( "lua/Weapons/Alien/Gore.lua", "lua/DPR/Gore.lua", "post" )

@@ -1,4 +1,6 @@
 modEntry = {
-	FileHooks = "lua/DPR/FileHooks.lua",
+	Server = "lua/DPR_Server.lua",
+	Shared = "lua/DPR_Shared.lua",
+	FileHooks = "lua/DPR_FileHooks.lua",
 	Priority = 100 --make sure this is higher than any UWE extension
 }

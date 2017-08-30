@@ -6,3 +6,5 @@ kMineHealth = 70 kMineArmor = 5
 
 kMedpackHeal = 50
 kMarineRegenerationHeal = 0
+
+kClogHealth = 180

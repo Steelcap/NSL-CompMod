@@ -49,3 +49,4 @@ kHeavyMachineGunDamageType = kDamageType.Puncture
 kWebbedParasiteDuration  = 0.2
 
 kMedPackCost = 2
+kGrenadeTechResearchTime = 15

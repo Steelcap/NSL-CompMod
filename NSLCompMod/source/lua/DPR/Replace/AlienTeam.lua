@@ -529,11 +529,7 @@ local function UpdateEggGeneration(self)
         end
         
         for _, hive in ipairs(builtHives) do
-        
-            if hive:UpdateSpawnEgg() then
-                break
-            end
-        
+            hive:UpdateSpawnEgg()
         end
         
         self.timeLastEggUpdate = Shared.GetTime()

@@ -9,6 +9,8 @@ local function NSLTechDataChanges(techData)
             record[kTechDataCategory] = kTechId.ShadeHive
         elseif techDataId == kTechId.NutrientMist then
             record[kTechDataRequiresInfestation] = true
+        elseif techDataId == kTechId.MedPack then
+            record[kCommanderSelectRadius] = 0.01
         else
             for removeIndex, removeTech in ipairs(techToRemove) do
                 if techDataId == kTechId[removeTech] then

@@ -47,3 +47,5 @@ kHeavyMachineGunDamage = 6
 kHeavyMachineGunDamageType = kDamageType.Puncture
 
 kShotgunSpreadDistance = 10
+
+kMedPackCost = 2

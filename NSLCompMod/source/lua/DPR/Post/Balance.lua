@@ -31,9 +31,6 @@ kSporeDustDamagePerSecond = 20
 
 kCatPackCost = 3
 
-kJetpackCost = 20
-kJetpackDropCost = 20
-
 kCatPackDuration = 12
 
 kPowerSurgeCost = 3
@@ -51,6 +48,8 @@ kShotgunSpreadDistance = 10
 kMedPackCost = 2
 
 kGrenadeTechResearchTime = 15
+
+kJetpackDropCost = 20
 
 kWeapons1ResearchCost = 20
 kWeapons2ResearchCost = 40

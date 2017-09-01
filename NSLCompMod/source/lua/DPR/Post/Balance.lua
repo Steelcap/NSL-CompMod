@@ -51,7 +51,6 @@ kShotgunSpreadDistance = 10
 kMedPackCost = 2
 
 kGrenadeTechResearchTime = 15
-kJetpackDropCost = 20
 
 kWeapons1ResearchCost = 20
 kWeapons2ResearchCost = 40

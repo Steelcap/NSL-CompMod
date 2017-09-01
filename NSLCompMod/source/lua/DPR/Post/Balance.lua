@@ -45,7 +45,7 @@ kHeavyMachineGunDamageType = kDamageType.Puncture
 
 kShotgunSpreadDistance = 10
 
-kMedPackCost = 2
+kMedPackCost = 1
 
 kGrenadeTechResearchTime = 15
 

@@ -1,5 +1,5 @@
 kBoneShieldArmorPerSecond = 0
-kBoneShieldDamageReduction = 0.75
+kBoneShieldDamageReduction = 0.25
 kBoneShieldCooldown = 6.25
 kBoneShieldMoveFraction = 0.0
 kBoneShieldInitialEnergyCost = 0.0

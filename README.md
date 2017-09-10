@@ -71,7 +71,6 @@ Maintained by Steelcap.
 * Reduced cost of PowerSurge from 5 to 3  
 * Commander Jetpack drop cost increased to 20 from 15  
 * Shotgun spread distance increased to 10 from 8.5  
-* Machine Gun cost increased to 25 from 20
 * Machine Gun weight decreased to match shotgun  
 * Machine Gun Damage decreased to 6 from 8
 * Machine Gun Damage changed to type Puncture from -MachineGun-

@@ -10,3 +10,5 @@ kMarineRegenerationHeal = 0
 kClogHealth = 180
 
 kBabblerHealth = 11
+
+kMedpackPickupDelay = 0.60

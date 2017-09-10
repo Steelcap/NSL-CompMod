@@ -60,6 +60,7 @@ Maintained by Steelcap.
 * Starting P-Res for Marines increased to 20 from 15  
 * Medpack heal-over-time decreased to 0 from 25
 * Medpack instant heal increased to 50 from 25
+* Medpack pickup delay increased to 0.60s from 0.45s
 * Medpack aim assistance radius decreased to 0.010 from 0.375
 * Increased cost of Armor 2 and Weapons 2 to 40 each from 30 each
 * Increased cost of Armor 3 and Weapons 3 to 60 each from 40 each

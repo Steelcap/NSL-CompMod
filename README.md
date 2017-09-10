@@ -28,7 +28,6 @@ Maintained by Steelcap.
 * Skulk hitbox changes reverted, hitbox is now smaller  
 * Skulk wall jump force decreased to 5.2 from 6.4 
 * Skulk speed reduction when sneaking increased to 50% from 33%  
-* Skulks do not gain health from biomass after biomass 4 (84 hp)  
 * Skulk Bite attack-pyramid base size reduced to 0.7-by-1 from 1.2-by-1.2
 * Gorges can now control which tunnel will be replaced when they place their third tunnel by crouching while placing it  
 * Gorge air friction reduced, and now depends on velocity  

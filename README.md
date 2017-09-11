@@ -14,7 +14,7 @@ Maintained by Steelcap.
 ###### Aliens  
 * Starting P-Res for Aliens increased to 15 from 12  
 * Removed Focus  
-* Silence does not affect primary attacks (Skulk bite, spit, Lerk bite, swipe, gore)
+* Maximum silence level reduces primary attack sounds by 75% instead of 100% (Skulk bite, spit, Lerk bite, swipe, gore)
 * Disabled Regeneration within 2 seconds of taking damage   
 * Remove alien abilities if required biomass is lost from hive death  
 * Soft cap on all alien healing over 16% per second, reducing effectiveness by 80%  

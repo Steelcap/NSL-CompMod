@@ -50,11 +50,9 @@ Maintained by Steelcap.
 * Advanced Metabolize health point regeneration reduced to 10 from 15  
 * Onos P-Res cost reduced to 55 from 62
 * Onos Movement Speed increased from 6.6 to 7.5
-* Removed Energy use for BoneShield
-* Re introduced "Fuel" for BoneShield
-* Boneshield armor regeneration per second reduced to 0  
-* Boneshield damage reduction increased to 75%  
-* Boneshield cooldown reduced to 6.25 seconds  
+* Onos cannot move while boneshield is active
+* Boneshield does not affect regeneration of health (both innate and from structures/gorges)
+* Boneshield damage reduction decreased to 75% from 80%  
 
 ###### Marines  
 * Starting P-Res for Marines increased to 20 from 15  

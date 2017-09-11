@@ -1,15 +1,7 @@
-kBoneShieldArmorPerSecond = 0
-kBoneShieldDamageReduction = 0.25
-kBoneShieldCooldown = 6.25
-kBoneShieldMoveFraction = 0.0
-kBoneShieldInitialEnergyCost = 0.0
-kBoneShieldInnateCombatRegenRate = 1
+kBoneShieldDamageReduction = 0.25 --75% frontal damage reduction
+kBoneShieldMoveFraction = 0.0 --0% of max speed aka no movement
+kBoneShieldInnateCombatRegenRate = 1 --don't affect innate regen in combat
 kBoneshieldPreventInnateRegen = false
-kBoneShieldPreventEnergize = false
-kBoneShieldPreventRecuperation = false
-kBoneShieldHealPerSecond = 0
-kBoneShieldMaxDuration = 4
-kBoneShieldMinimumFuel = 0.9 -- otherwise you can trigger it for a frame and it feels bad
 
 kAutoBuildRate = 0.3
 

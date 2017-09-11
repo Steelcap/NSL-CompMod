@@ -25,6 +25,7 @@ Maintained by Steelcap.
 * Cyst max hp reduced to 180  
 * Cyst maturation rate reduced to 15 from 45  
 * Removed the ability to drop lifeform eggs   
+* Mucous adds shield based on maximum health, so increasing biomass will increase mucous shield
 * Skulk hitbox changes reverted, hitbox is now smaller  
 * Skulk wall jump force decreased to 5.2 from 6.4 
 * Skulk speed reduction when sneaking increased to 50% from 33%  

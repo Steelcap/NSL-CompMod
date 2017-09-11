@@ -23,7 +23,7 @@ Maintained by Steelcap.
 * Nutrient Mist no longer preserves structures off infestation  
 * Cysts will be damaged while unconnected  
 * Cyst max hp reduced to 180  
-* Cyst maturation rate reduced to 10 from 45  
+* Cyst maturation rate reduced to 15 from 45  
 * Removed the ability to drop lifeform eggs   
 * Skulk hitbox changes reverted, hitbox is now smaller  
 * Skulk wall jump force decreased to 5.2 from 6.4 

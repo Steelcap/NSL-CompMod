@@ -25,6 +25,8 @@ kMineDamage = 140
 
 kMucousShieldPercent = 0.15
 
+kRuptureParasiteTime = 3
+
 kContaminationBileSpewCount = 1
 
 kSporesDustDamagePerSecond = 20

@@ -21,6 +21,7 @@ Maintained by Steelcap.
 * Soft cap on all alien healing over 16% per second, reducing effectiveness by 80%  
 * Nutrient Mist requires infestation to place  
 * Nutrient Mist no longer preserves structures off infestation  
+* Parasites from Rupture last 3 seconds, reduced from 10
 * Cysts will be damaged while unconnected  
 * Cyst max hp reduced to 180  
 * Cyst maturation rate reduced to 15 from 45  

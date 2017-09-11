@@ -51,9 +51,9 @@ kJetpackDropCost = 20
 
 kWeapons1ResearchCost = 20
 kWeapons2ResearchCost = 40
-kWeapons3ResearchCost = 60
+kWeapons3ResearchCost = 45
 
 kArmor1ResearchCost = 20
 kArmor2ResearchCost = 40
-kArmor3ResearchCost = 60
+kArmor3ResearchCost = 45
 

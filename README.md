@@ -63,7 +63,7 @@ Maintained by Steelcap.
 * Medpack pickup delay increased to 0.56s from 0.45s
 * Medpack aim assistance radius decreased to 0.100 from 0.375
 * Increased cost of Armor 2 and Weapons 2 to 40 each from 30 each
-* Increased cost of Armor 3 and Weapons 3 to 60 each from 40 each
+* Increased cost of Armor 3 and Weapons 3 to 45 each from 40 each
 * Hand Grenade research time decreased to 15s from 45s
 * Removed PowerSurge research, PowerSurge now requires powered Robotics Factory 
 * Removed secondary effects of PowerSurge (Damage and AttackSlow)  

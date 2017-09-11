@@ -16,7 +16,7 @@ Maintained by Steelcap.
 * Removed Focus  
 * Silence moved to Shade Hive from Shift Hive   
 * Silence does not affect primary attacks (Skulk bite, spit, Lerk bite, swipe, gore)
-* Disabled Regeneration within 3 seconds of taking damage   
+* Disabled Regeneration within 2 seconds of taking damage   
 * Remove alien abilities if required biomass is lost from hive death  
 * Soft cap on all alien healing over 16% per second, reducing effectiveness by 80%  
 * Nutrient Mist requires infestation to place  

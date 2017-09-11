@@ -41,7 +41,6 @@ Maintained by Steelcap.
 * Lerk hitbox changes reverted, hitbox is now smaller 
 * Lerk dive is slower  
 * Lerk flapping when strafing or without celerity is weaker
-* Nerfed crush effectiveness on Lerk Spikes to 4.5% from 7%  
 * Lerk spores moved to Biomass 7 from Biomass 4  
 * Lerk spores damage per second increased to 20 from 15  
 * Fade P-Res cost decreased to 35 from 37

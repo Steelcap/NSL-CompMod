@@ -5,14 +5,11 @@ function NS2Gamerules_GetUpgradedAlienDamage( target, attacker, doer, damage, ar
     if attacker:GetHasUpgrade( kTechId.Crush ) then --CragHive
         
         local shellLevel = GetShellLevel( kTeam2Index )
-		local crushPercent = kAlienCrushDamagePercentByLevel
-		if damageType == kDamageType.Puncture then
-			crushPercent = .045 end
         if shellLevel > 0 then
             if target:isa("Exo") or target.GetReceivesStructuralDamage and target:GetReceivesStructuralDamage(damageType) then
-                damage = damage + ( damage * ( shellLevel * crushPercent ) )
+                damage = damage + ( damage * ( shellLevel * kAlienCrushDamagePercentByLevel ) )
             elseif target:isa("Player") then
-                armorFractionUsed = kBaseArmorUseFraction + ( shellLevel * crushPercent )
+                armorFractionUsed = kBaseArmorUseFraction + ( shellLevel * kAlienCrushDamagePercentByLevel )
             end
         end
         

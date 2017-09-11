@@ -14,7 +14,6 @@ Maintained by Steelcap.
 ###### Aliens  
 * Starting P-Res for Aliens increased to 15 from 12  
 * Removed Focus  
-* Silence moved to Shade Hive from Shift Hive   
 * Silence does not affect primary attacks (Skulk bite, spit, Lerk bite, swipe, gore)
 * Disabled Regeneration within 2 seconds of taking damage   
 * Remove alien abilities if required biomass is lost from hive death  

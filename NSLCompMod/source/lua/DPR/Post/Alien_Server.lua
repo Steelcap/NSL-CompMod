@@ -1,15 +1,5 @@
 Script.Load("lua/AlienUpgradeManager.lua")
 
-function Alien:UpdateSilenceLevel()
-
-    if GetHasSilenceUpgrade(self) then
-        self.silenceLevel = GetVeilLevel(self:GetTeamNumber())
-    else
-        self.silenceLevel = 0
-    end
-
-end
-
 function Alien:UpdateAutoHeal()
 
     PROFILE("Alien:UpdateAutoHeal")

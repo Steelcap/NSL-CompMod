@@ -10,7 +10,7 @@ kAlienTechMap =
         { kTechId.Carapace, 4, 5 },
         { kTechId.Regeneration, 5, 5 },
         
-       -- { kTechId.Focus, 6, 5 },
+        { kTechId.Focus, 6, 5 },
         { kTechId.Vampirism, 7, 5 },
         { kTechId.Aura, 8, 5 },
         

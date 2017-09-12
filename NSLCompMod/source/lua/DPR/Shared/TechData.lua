@@ -1,6 +1,5 @@
 local function NSLTechDataChanges(techData)
-    local techToRemove = {"GorgeEgg", "LerkEgg", "FadeEgg", "OnosEgg", 
-                            "Focus"}
+    local techToRemove = {"GorgeEgg", "LerkEgg", "FadeEgg", "OnosEgg"}
 
     for techIndex, record in ipairs(techData) do
         local techDataId = record[kTechDataId]

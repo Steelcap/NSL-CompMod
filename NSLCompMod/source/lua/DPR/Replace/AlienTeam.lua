@@ -847,7 +847,7 @@ function AlienTeam:InitTechTree()
     self.techTree:AddBuyNode(kTechId.Carapace, kTechId.Shell, kTechId.None, kTechId.AllAliens)    
     self.techTree:AddBuyNode(kTechId.Regeneration, kTechId.Shell, kTechId.None, kTechId.AllAliens)
     
-    --self.techTree:AddBuyNode(kTechId.Focus, kTechId.Veil, kTechId.None, kTechId.AllAliens)
+    self.techTree:AddBuyNode(kTechId.Focus, kTechId.Veil, kTechId.None, kTechId.AllAliens)
     self.techTree:AddBuyNode(kTechId.Aura, kTechId.Veil, kTechId.None, kTechId.AllAliens)
     self.techTree:AddBuyNode(kTechId.Vampirism, kTechId.Veil, kTechId.None, kTechId.AllAliens)
     
@@ -1026,7 +1026,7 @@ function AlienTeam:OnUpgradeChamberDestroyed(upgradeChamber)
         [kTechId.AdrenalineSpur] = { "Spur", kTechId.Adrenaline },
         [kTechId.SilenceSpur] = { "Spur", kTechId.Silence },
         
-        --[kTechId.FocusVeil] = { "Veil", kTechId.Focus },
+        [kTechId.FocusVeil] = { "Veil", kTechId.Focus },
         [kTechId.AuraVeil] = { "Veil", kTechId.Aura },
         [kTechId.VampirismVeil] = { "Veil", kTechId.Vampirism }
     }

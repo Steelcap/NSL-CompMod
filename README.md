@@ -5,7 +5,7 @@ The main mod is on the Steam Workshop with ID [2ADC73ED](https://steamcommunity.
 Maintained by Steelcap.
 
 ## Changes
-### 2017-8-10
+### 2017-8-12
 * Removed floating health bars on players  
 * P-Res rate for all players decreased to 0.1 from 0.125  
 * Disallowed seeing who is enemy commander in pregame  
@@ -13,20 +13,20 @@ Maintained by Steelcap.
 
 ###### Aliens  
 * Starting P-Res for Aliens increased to 15 from 12  
-* Maximum Silence level reduces primary attack sounds by 75% instead of 100% (Skulk bite, spit, Lerk bite, swipe, gore)
-* Maximum Focus level increases damage by 100% and decreases attack speed by 66%
-* Attacks using Focus against players do Light damage (half as effective against armor compared to Normal)
-* Disabled Regeneration within 2 seconds of taking damage   
+* **Maximum Silence level reduces primary attack sounds by 75% instead of 100% (Skulk bite, spit, Lerk bite, swipe, gore)**
+* **Maximum Focus level increases damage by 100% and decreases attack speed by 66%**
+* **Attacks using Focus against players do Light damage (half as effective against armor compared to Normal)**
+* **Disabled Regeneration within 2 seconds of taking damage**
 * Remove alien abilities if required biomass is lost from hive death  
 * Soft cap on all alien healing over 16% per second, reducing effectiveness by 80%  
 * Nutrient Mist requires infestation to place  
 * Nutrient Mist no longer preserves structures off infestation  
-* Parasites from Rupture last 3 seconds, reduced from 10
+* **Parasites from Rupture last 3 seconds, reduced from 10**
 * Cysts will be damaged while unconnected  
 * Cyst max hp reduced to 180  
-* Cyst maturation rate reduced to 15 from 45  
+* **Cyst maturation rate reduced to 15 from 45**  
 * Removed the ability to drop lifeform eggs   
-* Mucous adds shield based on maximum health, so increasing biomass will increase mucous shield
+* **Mucous adds shield based on maximum health, so increasing biomass will increase mucous shield**
 * Skulk hitbox changes reverted, hitbox is now smaller  
 * Skulk wall jump force decreased to 5.2 from 6.4 
 * Skulk speed reduction when sneaking increased to 50% from 33%  
@@ -51,18 +51,18 @@ Maintained by Steelcap.
 * Advanced Metabolize health point regeneration reduced to 10 from 15  
 * Onos P-Res cost reduced to 55 from 62
 * Onos Movement Speed increased from 6.6 to 7.5
-* Onos cannot move while boneshield is active
-* Boneshield does not affect regeneration of health (both innate and from structures/gorges)
-* Boneshield damage reduction decreased to 75% from 80%  
+* **Onos cannot move while boneshield is active**
+* **Boneshield does not affect regeneration of health (both innate and from structures/gorges)**
+* **Boneshield damage reduction decreased to 75% from 80%**  
 
 ###### Marines  
 * Starting P-Res for Marines increased to 20 from 15  
 * Medpack heal-over-time decreased to 0 from 25
 * Medpack instant heal increased to 50 from 25
-* Medpack pickup delay increased to 0.56s from 0.45s
-* Medpack aim assistance radius decreased to 0.100 from 0.375
+* **Medpack pickup delay increased to 0.56s from 0.45s**
+* **Medpack aim assistance radius decreased to 0.100 from 0.375**
 * Increased cost of Armor 2 and Weapons 2 to 40 each from 30 each
-* Increased cost of Armor 3 and Weapons 3 to 45 each from 40 each
+* **Increased cost of Armor 3 and Weapons 3 to 45 each from 40 each**
 * Hand Grenade research time decreased to 15s from 45s
 * Removed PowerSurge research, PowerSurge now requires powered Robotics Factory 
 * Removed secondary effects of PowerSurge (Damage and AttackSlow)  

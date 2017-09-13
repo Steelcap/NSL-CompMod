@@ -1,3 +1,4 @@
+-- PowerSurge doesn't need researching
 function MarineTeam:InitTechTree()
    
    PlayingTeam.InitTechTree(self)

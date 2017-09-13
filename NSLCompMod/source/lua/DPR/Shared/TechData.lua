@@ -1,5 +1,12 @@
+-- remove all Egg drops
 local function NSLTechDataChanges(techData)
-    local techToRemove = {"GorgeEgg", "LerkEgg", "FadeEgg", "OnosEgg"}
+    -- we don't care about the value as long as it's not nil
+    local techToRemove = {
+        [kTechId.GorgeEgg] = true,
+        [kTechId.LerkEgg] = true,
+        [kTechId.FadeEgg] = true,
+        [kTechId.OnosEgg] = true
+    }
 
     for techIndex, record in ipairs(techData) do
         local techDataId = record[kTechDataId]
@@ -9,12 +16,8 @@ local function NSLTechDataChanges(techData)
         elseif techDataId == kTechId.MedPack then
             record[kCommanderSelectRadius] = 0.1
         else
-            for removeIndex, removeTech in ipairs(techToRemove) do
-                if techDataId == kTechId[removeTech] then
-                    table.remove(techData, techIndex)
-                    table.remove(techToRemove, removeIndex)
-                    break
-                end
+            if techToRemove[techDataId] then
+                table.remove(techData, techIndex)
             end
         end
     end

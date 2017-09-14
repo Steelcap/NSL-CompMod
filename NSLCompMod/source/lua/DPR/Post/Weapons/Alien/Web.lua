@@ -1,3 +1,4 @@
+-- Same as vanilla
 local function GetDistance(self, fromPlayer)
 
     local tranformCoords = self:GetCoords():GetInverse()
@@ -7,6 +8,7 @@ local function GetDistance(self, fromPlayer)
 
 end
 
+-- Remove parasite ability
 local function NSLCheckForIntersection(self, fromPlayer)
 
     if not self.endPoint then
@@ -66,11 +68,12 @@ local function NSLCheckForIntersection(self, fromPlayer)
 
 end 
 
--- called by the players so they can predict the web effect
+-- Call changed function
 function Web:UpdateWebOnProcessMove(fromPlayer)
     NSLCheckForIntersection(self, fromPlayer)
 end
 
+-- Call changed function
 if Server then
 
     local function TriggerWebSpawnEffects(self)

@@ -1,6 +1,5 @@
-
-local kMetabolizeHealthRegain = 10 -- changed for NSL comp mod
-local kMetabolizeEnergyRegain = 35
+local kMetabolizeEnergyRegain = 35 -- same as vanilla
+local kMetabolizeHealthRegain = 10 -- changed
 
 function Metabolize:OnTag(tagName)
 

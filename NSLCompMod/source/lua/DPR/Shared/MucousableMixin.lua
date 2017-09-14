@@ -1,4 +1,4 @@
-local kMaxShield = 250 --TODO: getupvalue
+local kMaxShield = 250 -- same as vanilla
 
 -- Use biomass-included health, not just base health
 function MucousableMixin:GetMaxShieldAmount()

@@ -1,7 +1,4 @@
-Script.Load("lua/NS2Utility_Server.lua")
-Script.Load("lua/Table.lua")
-Script.Load("lua/Utility.lua")
-
+-- same as vanilla
 local function UnlockAbility(forAlien, techId)
 
     local mapName = LookupTechData(techId, kTechDataMapName)
@@ -24,6 +21,7 @@ local function UnlockAbility(forAlien, techId)
 
 end
 
+-- same as vanilla
 local function LockAbility(forAlien, techId)
 
     local mapName = LookupTechData(techId, kTechDataMapName)    
@@ -49,24 +47,7 @@ local function LockAbility(forAlien, techId)
     
 end
 
-local function CheckHasPrereq(teamNumber, techId)
-
-    local hasPrereq = false
-
-    local techTree = GetTechTree(teamNumber)
-    if techTree then
-        
-        local techNode = techTree:GetTechNode(techId)
-        if techNode then
-            hasPrereq = techTree:GetHasTech(techNode:GetPrereq1())
-        end
-    
-    end
-
-    return hasPrereq
-
-end
-
+-- Lose abilities when you lose the required biomass
 function UpdateAbilityAvailability(forAlien, tierOneTechId, tierTwoTechId, tierThreeTechId)
 
     local time = Shared.GetTime()

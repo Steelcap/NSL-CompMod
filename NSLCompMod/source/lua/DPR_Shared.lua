@@ -1,3 +1,6 @@
+Script.Load("lua/DPR/Elixer_Utility.lua")
+Elixer.UseVersion(1.8)
+
 --This global disables balance changes of the UWE Extensions
 gDisableUWEBalance = true
 

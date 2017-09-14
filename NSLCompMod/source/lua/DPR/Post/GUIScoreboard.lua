@@ -1,5 +1,5 @@
-
-local function NSLGetIsVisibleTeam(teamNumber)
+-- Hide the opposing team's commander in pregame
+local function GetIsVisibleTeam(teamNumber)
     local isVisibleTeam = false
     local localPlayer = Client.GetLocalPlayer()
     if localPlayer then
@@ -12,7 +12,6 @@ local function NSLGetIsVisibleTeam(teamNumber)
         
     end
     
-	-- The following if block has been commented out by NSL Competitive Mod.
     -- if not isVisibleTeam then
         -- -- Allow seeing who is commander during pre-game
         -- local gInfo = GetGameInfoEntity()
@@ -24,6 +23,5 @@ local function NSLGetIsVisibleTeam(teamNumber)
     return isVisibleTeam
 end
 
-
-ReplaceLocals( GUIScoreboard.UpdateTeam, {  GetIsVisibleTeam = NSLGetIsVisibleTeam } )
-ReplaceLocals( GUIScoreboard.SendKeyEvent, {  GetIsVisibleTeam = NSLGetIsVisibleTeam } )
+ReplaceLocals( GUIScoreboard.UpdateTeam, {  GetIsVisibleTeam = GetIsVisibleTeam } )
+ReplaceLocals( GUIScoreboard.SendKeyEvent, {  GetIsVisibleTeam = GetIsVisibleTeam } )

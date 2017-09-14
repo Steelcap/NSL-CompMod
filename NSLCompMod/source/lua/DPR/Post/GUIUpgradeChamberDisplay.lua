@@ -2,8 +2,9 @@
 local newIndexToUpgrades =
 {
     { kTechId.Shell, kTechId.Crush, kTechId.Carapace, kTechId.Regeneration },
-    { kTechId.Spur,  kTechId.Celerity, kTechId.Adrenaline },
-    { kTechId.Veil, kTechId.Vampirism, kTechId.Aura, kTechId.Silence, },
+    { kTechId.Spur, kTechId.Silence, kTechId.Celerity, kTechId.Adrenaline },
+    { kTechId.Veil, kTechId.Vampirism, kTechId.Aura, kTechId.Focus },
 }
 
-ReplaceLocals( GUIUpgradeChamberDisplay.Update, {  kIndexToUpgrades = newIndexToUpgrades } )
+-- Same as vanilla currently
+--ReplaceLocals( GUIUpgradeChamberDisplay.Update, {  kIndexToUpgrades = newIndexToUpgrades } )

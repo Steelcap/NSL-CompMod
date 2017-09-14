@@ -1,15 +1,7 @@
-kBoneShieldArmorPerSecond = 0
-kBoneShieldDamageReduction = 0.75
-kBoneShieldCooldown = 6.25
-kBoneShieldMoveFraction = 0.0
-kBoneShieldInitialEnergyCost = 0.0
-kBoneShieldInnateCombatRegenRate = 1
+kBoneShieldDamageReduction = 0.25 --75% frontal damage reduction
+kBoneShieldMoveFraction = 0.0 --0% of max speed aka no movement
+kBoneShieldInnateCombatRegenRate = 1 --don't affect innate regen in combat
 kBoneshieldPreventInnateRegen = false
-kBoneShieldPreventEnergize = false
-kBoneShieldPreventRecuperation = false
-kBoneShieldHealPerSecond = 0
-kBoneShieldMaxDuration = 4
-kBoneShieldMinimumFuel = 0.9 -- otherwise you can trigger it for a frame and it feels bad
 
 kAutoBuildRate = 0.3
 
@@ -25,14 +17,13 @@ kMineDamage = 140
 
 kMucousShieldPercent = 0.15
 
+kRuptureParasiteTime = 3
+
 kContaminationBileSpewCount = 1
 
-kSporeDustDamagePerSecond = 20
+kSporesDustDamagePerSecond = 20
 
 kCatPackCost = 3
-
-kJetpackCost = 20
-kJetpackDropCost = 20
 
 kCatPackDuration = 12
 
@@ -41,7 +32,22 @@ kPowerSurgeDamage = 0
 kPowerSurgeDamageRadius = 0
 kPowerSurgeElectrifiedDuration = 0
 
-kHeavyMachineGunCost = 25
-
 kHeavyMachineGunDamage = 6
 kHeavyMachineGunDamageType = kDamageType.Puncture
+
+kShotgunSpreadDistance = 10
+
+kMedPackCost = 1
+
+kGrenadeTechResearchTime = 15
+
+kJetpackDropCost = 20
+
+kWeapons1ResearchCost = 20
+kWeapons2ResearchCost = 40
+kWeapons3ResearchCost = 45
+
+kArmor1ResearchCost = 20
+kArmor2ResearchCost = 40
+kArmor3ResearchCost = 45
+

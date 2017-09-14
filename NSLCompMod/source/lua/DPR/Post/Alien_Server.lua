@@ -1,16 +1,4 @@
-
 Script.Load("lua/AlienUpgradeManager.lua")
-
-function Alien:UpdateSilenceLevel()
-
-    if GetHasSilenceUpgrade(self) then
-        self.silenceLevel = GetVeilLevel(self:GetTeamNumber())
-    else
-        self.silenceLevel = 0
-    end
-
-end
-
 
 function Alien:UpdateAutoHeal()
 
@@ -29,7 +17,7 @@ function Alien:UpdateAutoHeal()
             healRate = Clamp(kAlienInnateRegenerationPercentage * maxHealth, kAlienMinInnateRegeneration, kAlienMaxInnateRegeneration) 
         end
         
-        if self:GetTimeLastDamageTaken() + 3 > Shared.GetTime() then
+        if self:GetTimeLastDamageTaken() + 2 > Shared.GetTime() then
             healRate = healRate * kAlienRegenerationCombatModifier
         end
 
@@ -39,7 +27,6 @@ function Alien:UpdateAutoHeal()
     end 
 
 end
-
 
 -- Morph into new class or buy upgrade.
 function Alien:ProcessBuyAction(techIds)

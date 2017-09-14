@@ -529,11 +529,7 @@ local function UpdateEggGeneration(self)
         end
         
         for _, hive in ipairs(builtHives) do
-        
-            if hive:UpdateSpawnEgg() then
-                break
-            end
-        
+            hive:UpdateSpawnEgg()
         end
         
         self.timeLastEggUpdate = Shared.GetTime()
@@ -851,11 +847,11 @@ function AlienTeam:InitTechTree()
     self.techTree:AddBuyNode(kTechId.Carapace, kTechId.Shell, kTechId.None, kTechId.AllAliens)    
     self.techTree:AddBuyNode(kTechId.Regeneration, kTechId.Shell, kTechId.None, kTechId.AllAliens)
     
-    --self.techTree:AddBuyNode(kTechId.Focus, kTechId.Veil, kTechId.None, kTechId.AllAliens)
+    self.techTree:AddBuyNode(kTechId.Focus, kTechId.Veil, kTechId.None, kTechId.AllAliens)
     self.techTree:AddBuyNode(kTechId.Aura, kTechId.Veil, kTechId.None, kTechId.AllAliens)
     self.techTree:AddBuyNode(kTechId.Vampirism, kTechId.Veil, kTechId.None, kTechId.AllAliens)
     
-    self.techTree:AddBuyNode(kTechId.Silence, kTechId.Veil, kTechId.None, kTechId.AllAliens)  
+    self.techTree:AddBuyNode(kTechId.Silence, kTechId.Spur, kTechId.None, kTechId.AllAliens)  
     self.techTree:AddBuyNode(kTechId.Celerity, kTechId.Spur, kTechId.None, kTechId.AllAliens)  
     self.techTree:AddBuyNode(kTechId.Adrenaline, kTechId.Spur, kTechId.None, kTechId.AllAliens)  
     
@@ -1028,10 +1024,9 @@ function AlienTeam:OnUpgradeChamberDestroyed(upgradeChamber)
         
         [kTechId.CeleritySpur] = { "Spur", kTechId.Celerity },
         [kTechId.AdrenalineSpur] = { "Spur", kTechId.Adrenaline },
-		
-		--[kTechId.FocusVeil] = { "Veil", kTechId.Focus },
-		
-        [kTechId.SilenceSpur] = { "Veil", kTechId.Silence },
+        [kTechId.SilenceSpur] = { "Spur", kTechId.Silence },
+        
+        [kTechId.FocusVeil] = { "Veil", kTechId.Focus },
         [kTechId.AuraVeil] = { "Veil", kTechId.Aura },
         [kTechId.VampirismVeil] = { "Veil", kTechId.Vampirism }
     }

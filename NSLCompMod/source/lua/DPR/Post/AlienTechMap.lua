@@ -10,14 +10,13 @@ kAlienTechMap =
         { kTechId.Carapace, 4, 5 },
         { kTechId.Regeneration, 5, 5 },
         
-       -- { kTechId.Focus, 6, 5 },
-	    { kTechId.Silence, 6, 5 },
+        { kTechId.Focus, 6, 5 },
         { kTechId.Vampirism, 7, 5 },
         { kTechId.Aura, 8, 5 },
         
-
-        { kTechId.Celerity, 9, 5 },
-        { kTechId.Adrenaline, 10, 5 },
+        { kTechId.Silence, 9, 5 },
+        { kTechId.Celerity, 10, 5 },
+        { kTechId.Adrenaline, 11, 5 },
     
     { kTechId.BioMassOne, 3, 7, nil, "1" }, { kTechId.BabblerEgg, 3, 8 }, {kTechId.WebTech, 3, 9},
     { kTechId.BioMassTwo, 4, 7, nil, "2" },  {kTechId.Rupture, 4, 8}, { kTechId.Charge, 4, 9 },

@@ -1,3 +1,20 @@
+local upgradeToRemove = {
+    -- Remove lifeform egg drops
+    [kTechId.GorgeEgg] = true,
+    [kTechId.LerkEgg] = true,
+    [kTechId.FadeEgg] = true,
+    [kTechId.OnosEgg] = true,
+}
+
+local oldAddUpgradeNode = TechTree.AddUpgradeNode
+function TechTree:AddUpgradeNode(techId, prereq1, prereq2)
+    if upgradeToRemove[techId] then
+        return
+    else
+        oldAddUpgradeNode(self, techId, prereq1, prereq2)
+    end
+end
+
 local researchToRemove = {
     -- Remove PowerSurge research
     [kTechId.PowerSurgeTech] = true

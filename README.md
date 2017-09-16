@@ -15,7 +15,7 @@ Maintained by Steelcap.
 * Silence moved to Shade hive from Shift hive
 * Maximum Silence level reduces primary attack sounds by 75% instead of 100% (Skulk bite, spit, Lerk bite, swipe, gore)
 * **Removed Focus**
-* Vampirism moved to Shift hive from Shade hive
+* **Vampirism moved to Shade hive from Shift hive (same as vanilla)**
 * Disabled Regeneration within 2 seconds of taking damage
 * Remove alien abilities if required biomass is lost from hive death  
 * Soft cap on all alien healing over 16% per second, reducing effectiveness by 80%  

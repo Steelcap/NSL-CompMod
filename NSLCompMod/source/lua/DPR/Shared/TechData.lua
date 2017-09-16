@@ -19,9 +19,6 @@ local function NSLTechDataChanges(techData)
         elseif techDataId == kTechId.Silence then
             -- silence is on shade hive
             record[kTechDataCategory] = kTechId.ShadeHive
-        elseif techDataId == kTechId.Vampirism then
-            -- vampirism is on shift hive
-            record[kTechDataCategory] = kTechId.ShiftHive
         elseif techDataId == kTechId.MedPack then
             -- medpack auto-snap radius changed
             record[kCommanderSelectRadius] = 0.1

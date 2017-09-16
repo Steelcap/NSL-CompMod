@@ -166,7 +166,6 @@ function AlienTeam:UpdateTeamAutoHeal(timePassed)
 end
 
 -- move silence to veils
--- move vampirism to spurs
 function AlienTeam:OnUpgradeChamberDestroyed(upgradeChamber)
 
     if upgradeChamber:GetTechId() == kTechId.CarapaceShell then
@@ -181,14 +180,13 @@ function AlienTeam:OnUpgradeChamberDestroyed(upgradeChamber)
 
         [kTechId.CeleritySpur] = {"Spur", kTechId.Celerity},
         [kTechId.AdrenalineSpur] = {"Spur", kTechId.Adrenaline},
-        -- Move Vampirism to Spurs
-        [kTechId.VampirismVeil] = {"Spur", kTechId.Vampirism},
 
         -- Remove Focus
         --[kTechId.FocusVeil] = {"Veil", kTechId.Focus},
         [kTechId.AuraVeil] = {"Veil", kTechId.Aura},
         -- Move Silence to Veils
         [kTechId.SilenceSpur] = {"Veil", kTechId.Silence},
+        [kTechId.VampirismVeil] = {"Veil", kTechId.Vampirism},
     }
 
     local checkTech = checkForLostResearch[upgradeChamber:GetTechId()]

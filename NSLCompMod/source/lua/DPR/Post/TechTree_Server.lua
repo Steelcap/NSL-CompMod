@@ -45,8 +45,6 @@ local buyToRemove = {
 local buyToChange = {
     -- Move Silence to Veils
     [kTechId.Silence] = {kTechId.Silence, kTechId.Veil, kTechId.None, kTechId.AllAliens},
-    -- Move Vampirism to Spurs
-    [kTechId.Vampirism] = {kTechId.Vampirism, kTechId.Spur, kTechId.None, kTechId.AllAliens}
 }
 
 local oldAddBuyNode = TechTree.AddBuyNode

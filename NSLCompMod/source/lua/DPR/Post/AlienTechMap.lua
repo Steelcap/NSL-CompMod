@@ -4,9 +4,8 @@ local techToRemove = {
 }
 
 local techToMove = {
-    -- swap silence and vampirism
-    [kTechId.Silence] = {kTechId.Silence, 7, 5},
-    [kTechId.Vampirism] = {kTechId.Vampirism, 9, 5},
+    -- move silence to shade hive (in focus's spot)
+    [kTechId.Silence] = {kTechId.Silence, 6, 5},
     -- move spores to bio 7
     [kTechId.Spores] = {kTechId.Spores, 9, 9}
 }

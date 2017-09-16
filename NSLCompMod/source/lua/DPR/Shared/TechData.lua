@@ -1,7 +1,6 @@
--- remove all Egg drops
 local function NSLTechDataChanges(techData)
-    -- we don't care about the value as long as it's not nil
     local techToRemove = {
+        -- remove lifeform Egg drops
         [kTechId.GorgeEgg] = true,
         [kTechId.LerkEgg] = true,
         [kTechId.FadeEgg] = true,
@@ -12,8 +11,16 @@ local function NSLTechDataChanges(techData)
         local techDataId = record[kTechDataId]
 
         if techDataId == kTechId.NutrientMist then
+            -- nutrient mist requires infestation to place
             record[kTechDataRequiresInfestation] = true
+        elseif techDataId == kTechId.Silence then
+            -- silence is on shade hive
+            record[kTechDataCategory] = kTechId.ShadeHive
+        elseif techDataId == kTechId.Vampirism then
+            -- vampirism is on shift hive
+            record[kTechDataCategory] = kTechId.ShiftHive
         elseif techDataId == kTechId.MedPack then
+            -- medpack auto-snap radius changed
             record[kCommanderSelectRadius] = 0.1
         else
             if techToRemove[techDataId] then

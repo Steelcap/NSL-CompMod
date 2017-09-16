@@ -164,3 +164,52 @@ function AlienTeam:UpdateTeamAutoHeal(timePassed)
    end
     
 end
+
+-- move silence to veils
+-- move vampirism to spurs
+function AlienTeam:OnUpgradeChamberDestroyed(upgradeChamber)
+
+    if upgradeChamber:GetTechId() == kTechId.CarapaceShell then
+        self.updateAlienArmor = true
+    end
+
+    -- These is a list of all tech to check when a upgrade chamber is destroyed.
+    local checkForLostResearch = {
+        [kTechId.RegenerationShell] = {"Shell", kTechId.Regeneration},
+        [kTechId.CarapaceShell] = {"Shell", kTechId.Carapace},
+        [kTechId.CrushShell] = {"Shell", kTechId.Crush},
+
+        [kTechId.CeleritySpur] = {"Spur", kTechId.Celerity},
+        [kTechId.AdrenalineSpur] = {"Spur", kTechId.Adrenaline},
+        -- Move Vampirism to Spurs
+        [kTechId.VampirismVeil] = {"Spur", kTechId.Vampirism},
+
+        [kTechId.FocusVeil] = {"Veil", kTechId.Focus},
+        [kTechId.AuraVeil] = {"Veil", kTechId.Aura},
+        -- Move Silence to Veils
+        [kTechId.SilenceSpur] = {"Veil", kTechId.Silence},
+    }
+
+    local checkTech = checkForLostResearch[upgradeChamber:GetTechId()]
+    if checkTech then
+
+        local anyRemain = false
+        for _, ent in ientitylist(Shared.GetEntitiesWithClassname(checkTech[1])) do
+
+            -- Don't count the upgradeChamber as it is being destroyed now.
+            if ent ~= upgradeChamber and ent:GetTechId() == upgradeChamber:GetTechId() then
+
+                anyRemain = true
+                break
+
+            end
+
+        end
+
+        if not anyRemain then
+            SendTeamMessage(self, kTeamMessageTypes.ResearchLost, checkTech[2])
+        end
+
+    end
+
+end

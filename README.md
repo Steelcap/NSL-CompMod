@@ -12,9 +12,11 @@ Maintained by Steelcap.
 
 ###### Aliens  
 * Starting P-Res for Aliens increased to 15 from 12  
+* **Silence moved to Shade hive from Shift hive**
 * Maximum Silence level reduces primary attack sounds by 75% instead of 100% (Skulk bite, spit, Lerk bite, swipe, gore)
 * Maximum Focus level increases damage by 100% and decreases attack speed by 66%
 * Attacks using Focus against players do Light damage (half as effective against armor compared to Normal)
+* **Vampirism moved to Shift hive from Shade hive**
 * Disabled Regeneration within 2 seconds of taking damage
 * Remove alien abilities if required biomass is lost from hive death  
 * Soft cap on all alien healing over 16% per second, reducing effectiveness by 80%  

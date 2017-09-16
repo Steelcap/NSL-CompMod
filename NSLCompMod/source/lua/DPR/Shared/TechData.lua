@@ -7,7 +7,8 @@ local function NSLTechDataChanges(techData)
         [kTechId.OnosEgg] = true
     }
 
-    for techIndex, record in ipairs(techData) do
+    for techIndex = #techData, 1, -1 do
+        local record = techData[techIndex]
         local techDataId = record[kTechDataId]
 
         if techDataId == kTechId.NutrientMist then

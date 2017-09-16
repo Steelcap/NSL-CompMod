@@ -6,8 +6,8 @@ local techToMove = {
     [kTechId.Spores] = {kTechId.Spores, 9, 9}
 }
 
-for techIndex, record in ipairs(kAlienTechMap) do
-    local techId = record[1]
+for techIndex = #kAlienTechMap, 1, -1 do
+    local techId = kAlienTechMap[techIndex][1]
 
     if techToMove[techId] then
         kAlienTechMap[techIndex] = techToMove[techId]

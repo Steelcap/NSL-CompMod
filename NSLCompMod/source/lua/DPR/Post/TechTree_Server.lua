@@ -37,6 +37,11 @@ function TechTree:AddTargetedActivation(techId, prereq1, prereq2)
     end
 end
 
+local buyToRemove = {
+    -- Remove Focus
+    [kTechId.Focus] = true,
+}
+
 local buyToChange = {
     -- Move Silence to Veils
     [kTechId.Silence] = {kTechId.Silence, kTechId.Veil, kTechId.None, kTechId.AllAliens},
@@ -46,7 +51,9 @@ local buyToChange = {
 
 local oldAddBuyNode = TechTree.AddBuyNode
 function TechTree:AddBuyNode(techId, prereq1, prereq2, addOnTechId)
-    if buyToChange[techId] then
+    if buyToRemove[techId] then
+        return
+    elseif buyToChange[techId] then
         local changedNode = buyToChange[techId]
 
         oldAddBuyNode(self, changedNode[1], changedNode[2], changedNode[3], changedNode[4])

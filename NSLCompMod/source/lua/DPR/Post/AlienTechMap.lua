@@ -1,3 +1,8 @@
+local techToRemove = {
+    -- remove focus
+    [kTechId.Focus] = true,
+}
+
 local techToMove = {
     -- swap silence and vampirism
     [kTechId.Silence] = {kTechId.Silence, 7, 5},
@@ -9,7 +14,9 @@ local techToMove = {
 for techIndex = #kAlienTechMap, 1, -1 do
     local techId = kAlienTechMap[techIndex][1]
 
-    if techToMove[techId] then
+    if techToRemove[techId] then
+        table.remove(kAlienTechMap, techIndex)
+    elseif techToMove[techId] then
         kAlienTechMap[techIndex] = techToMove[techId]
     end
 end

@@ -3,7 +3,8 @@ local kIndexToUpgrades = {
     -- Move Vampirism to Spurs
     {kTechId.Spur, kTechId.Vampirism, kTechId.Celerity, kTechId.Adrenaline},
     -- Move Silence to Veils
-    {kTechId.Veil, kTechId.Silence, kTechId.Aura, kTechId.Focus},
+    -- Remove Focus
+    {kTechId.Veil, kTechId.Silence, kTechId.Aura},
 }
 
 ReplaceLocals( GUIUpgradeChamberDisplay.Update, {kIndexToUpgrades = kIndexToUpgrades} )

@@ -184,7 +184,8 @@ function AlienTeam:OnUpgradeChamberDestroyed(upgradeChamber)
         -- Move Vampirism to Spurs
         [kTechId.VampirismVeil] = {"Spur", kTechId.Vampirism},
 
-        [kTechId.FocusVeil] = {"Veil", kTechId.Focus},
+        -- Remove Focus
+        --[kTechId.FocusVeil] = {"Veil", kTechId.Focus},
         [kTechId.AuraVeil] = {"Veil", kTechId.Aura},
         -- Move Silence to Veils
         [kTechId.SilenceSpur] = {"Veil", kTechId.Silence},

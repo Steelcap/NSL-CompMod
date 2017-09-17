@@ -8,7 +8,6 @@ Maintained by Steelcap.
 * Removed floating health bars on players  
 * P-Res rate for all players decreased to 0.1 from 0.125  
 * Disallowed seeing who is enemy commander in pregame  
-* Pregame damage only occurs when touching enemy chair/hive  
 
 ###### Aliens  
 * Starting P-Res for Aliens increased to 15 from 12  

@@ -51,3 +51,5 @@ kArmor1ResearchCost = 20
 kArmor2ResearchCost = 40
 kArmor3ResearchCost = 45
 
+kSupplyPerTechpoint = 50
+kDrifterCost = 4

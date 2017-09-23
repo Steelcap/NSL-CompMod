@@ -61,7 +61,7 @@ Maintained by Steelcap.
 * Boneshield damage reduction decreased to 75% from 80%  
 
 ###### Marines  
-* **Cluster Grenades set players on fire like a flamethrower**
+* **Cluster Grenades set things on fire like a flamethrower**
 * **Observatory supply to 50 from 0**
 * **Sentry Battery supply to 20 from 0**
 * **Armory supply to 10 from 5**

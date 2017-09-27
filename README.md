@@ -10,17 +10,10 @@ Maintained by Steelcap.
 * Disallowed seeing who is enemy commander in pregame  
 
 ###### Aliens  
-* Drifter cost reduced from 8 to 4
-* Drifter HP reduced to 210 (from 300)
-* Alien Supply now 50 + (50 per hive) was 200
-* Drifter supply cost increased to 15 (from 10)
-* Whip supply cost increased to 15 (from 5)
-* Shift, shade, crag supply costs increased to 10 (from 5)
 * Starting P-Res for Aliens increased to 15 from 12  
 * Silence moved to Shade hive from Shift hive
 * Maximum Silence level reduces primary attack sounds by 75% instead of 100% (Skulk bite, spit, Lerk bite, swipe, gore)
 * Removed Focus
-* Vampirism moved to Shade hive from Shift hive (same as vanilla)
 * Disabled Regeneration within 2 seconds of taking damage
 * Remove alien abilities if required biomass is lost from hive death  
 * Soft cap on all alien healing over 16% per second, reducing effectiveness by 80%  
@@ -30,7 +23,13 @@ Maintained by Steelcap.
 * Cysts will be damaged while unconnected  
 * Cyst max hp reduced to 180  
 * Cyst maturation rate reduced to 15 from 45  
-* Removed the ability to drop lifeform eggs   
+* Removed the ability to drop lifeform eggs  
+* Drifter cost reduced from 8 to 4
+* Drifter HP reduced to 210 from 300
+* Alien supply limit is now 50 + (50 * number of hives), from 200
+* Drifter supply cost increased to 15 from 10
+* Whip supply cost increased to 15 from 5
+* Shift, shade, crag supply costs increased to 10 from 5
 * Mucous adds shield based on maximum health, so increasing biomass will increase mucous shield
 * Skulk hitbox changes reverted, hitbox is now smaller  
 * Skulk wall jump force decreased to 5.2 from 6.4 
@@ -61,20 +60,20 @@ Maintained by Steelcap.
 * Boneshield damage reduction decreased to 75% from 80%  
 
 ###### Marines  
-* **Cluster Grenades set things on fire like a flamethrower**
-* **Observatory supply to 50 from 0**
-* **Sentry Battery supply to 20 from 0**
-* **Armory supply to 10 from 5**
-* **Robotics Factory supply to 10 from 5**
-* **Arc supply to 15 from 10**
 * Starting P-Res for Marines increased to 20 from 15  
 * Medpack heal-over-time decreased to 0 from 25
 * Medpack instant heal increased to 50 from 25
 * Medpack pickup delay increased to 0.56s from 0.45s
 * Medpack aim assistance radius decreased to 0.100 from 0.375
+* **Observatory supply cost increased to 50 from 0**
+* **Sentry Battery supply cost increased to 20 from 0**
+* **Armory supply cost increased to 10 from 5**
+* **Robotics Factory supply cost increased to 10 from 5**
+* **Arc supply cost increased to 15 from 10**
 * Increased cost of Armor 2 and Weapons 2 to 40 each from 30 each
 * Increased cost of Armor 3 and Weapons 3 to 45 each from 40 each
 * Hand Grenade research time decreased to 15s from 45s
+* **Cluster Grenades set structures and players on fire**
 * Removed PowerSurge research, PowerSurge now requires powered Robotics Factory 
 * Removed secondary effects of PowerSurge (Damage and AttackSlow)  
 * Reduced cost of PowerSurge from 5 to 3  
@@ -96,17 +95,10 @@ Maintained by Steelcap.
 * Disallowed seeing who is enemy commander in pregame  
 
 ###### Aliens  
-* **Drifter cost reduced from 8 to 4**
-* **Drifter HP reduced to 210 (from 300)**
-* **Alien Supply now 50 + (50 per hive) was 200**
-* **Drifter supply cost increased to 15 (from 10)**
-* **Whip supply cost increased to 15 (from 5)**
-* **Shift, shade, crag supply costs increased to 10 (from 5)**
 * Starting P-Res for Aliens increased to 15 from 12  
 * Silence moved to Shade hive from Shift hive
 * Maximum Silence level reduces primary attack sounds by 75% instead of 100% (Skulk bite, spit, Lerk bite, swipe, gore)
 * Removed Focus
-* Vampirism moved to Shade hive from Shift hive (same as vanilla)
 * Disabled Regeneration within 2 seconds of taking damage
 * Remove alien abilities if required biomass is lost from hive death  
 * Soft cap on all alien healing over 16% per second, reducing effectiveness by 80%  
@@ -117,6 +109,12 @@ Maintained by Steelcap.
 * Cyst max hp reduced to 180  
 * Cyst maturation rate reduced to 15 from 45  
 * Removed the ability to drop lifeform eggs   
+* **Drifter cost reduced from 8 to 4**
+* **Drifter HP reduced to 210 from 300**
+* **Alien supply limit is now 50 + (50 * number of hives), from 200**
+* **Drifter supply cost increased to 15 from 10**
+* **Whip supply cost increased to 15 from 5**
+* **Shift, shade, crag supply costs increased to 10 from 5**
 * Mucous adds shield based on maximum health, so increasing biomass will increase mucous shield
 * Skulk hitbox changes reverted, hitbox is now smaller  
 * Skulk wall jump force decreased to 5.2 from 6.4 

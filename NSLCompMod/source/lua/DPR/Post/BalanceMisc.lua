@@ -22,4 +22,3 @@ kRoboticsFactorySupply = 10
 
 kSentryBatterySupply = 20
 kObservatorySupply = 50
-

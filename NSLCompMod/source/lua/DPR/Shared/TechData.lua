@@ -22,16 +22,14 @@ local function NSLTechDataChanges(techData)
         elseif techDataId == kTechId.MedPack then
             -- medpack auto-snap radius changed
             record[kCommanderSelectRadius] = 0.1
-		elseif techDataId == kTechId.Observatory then
-			--Obs now has a supply cost
-			record[kTechDataSupply] = kObservatorySupply
-		elseif techDataId == kTechId.SentryBattery then
-			--sentry battery now has a supply cost
-			record[kTechDataSupply] = kSentryBatterySupply
-        else
-            if techToRemove[techDataId] then
-                table.remove(techData, techIndex)
-            end
+        elseif techDataId == kTechId.Observatory then
+            -- observatory has a supply cost
+            record[kTechDataSupply] = kObservatorySupply
+        elseif techDataId == kTechId.SentryBattery then
+            -- sentry battery has a supply cost
+            record[kTechDataSupply] = kSentryBatterySupply
+        elseif techToRemove[techDataId] then
+            table.remove(techData, techIndex)
         end
     end
 end

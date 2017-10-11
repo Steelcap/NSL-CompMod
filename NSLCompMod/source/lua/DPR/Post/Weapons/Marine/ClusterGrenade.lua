@@ -21,10 +21,8 @@ if Server then
         -- lerk spores
         local spores = GetEntitiesWithinRange("SporeCloud", grenadePos, range)
 
-        -- lerk umbra, mucous, enzyme
+        -- lerk umbra
         local umbras = GetEntitiesWithinRange("CragUmbra", grenadePos, range)
-        table.copy(GetEntitiesWithinRange("MucousMembrane", grenadePos, range), umbras, true)
-        table.copy(GetEntitiesWithinRange("EnzymeCloud", grenadePos, range), umbras, true)
 
         -- bilebomb (gorge and contamination), whip bomb
         local bombs = GetEntitiesWithinRange("Bomb", grenadePos, range)

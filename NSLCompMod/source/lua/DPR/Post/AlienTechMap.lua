@@ -7,7 +7,9 @@ local techToMove = {
     -- move silence to shade hive (in focus's spot)
     [kTechId.Silence] = {kTechId.Silence, 6, 5},
     -- move spores to bio 7
-    [kTechId.Spores] = {kTechId.Spores, 9, 9}
+    [kTechId.Spores] = {kTechId.Spores, 9, 9},
+    -- move contamination to bio 9
+    [kTechId.Contamination] = {kTechId.Contamination, 11, 9}
 }
 
 for techIndex = #kAlienTechMap, 1, -1 do

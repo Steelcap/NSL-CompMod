@@ -76,3 +76,19 @@ function TechTree:AddBuyNode(techId, prereq1, prereq2, addOnTechId)
         oldAddBuyNode(self, techId, prereq1, prereq2, addOnTechId)
     end
 end
+
+local buildToChange = {
+    -- Move Contamination to bio 9
+    [kTechId.Contamination] = {kTechId.Contamination, kTechId.BioMassNine},
+}
+
+local oldAddBuildNode = TechTree.AddBuildNode
+function TechTree:AddBuildNode(techId, prereq1, prereq2, isRequired)
+    if buildToChange[techId] then
+        local changedNode = buildToChange[techId]
+
+        oldAddBuildNode(self, changedNode[1], changedNode[2], changedNode[3], changedNode[4])
+    else
+        oldAddBuildNode(self, techId, prereq1, prereq2, isRequired)
+    end
+end

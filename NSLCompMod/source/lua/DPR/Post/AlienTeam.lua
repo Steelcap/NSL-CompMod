@@ -1,5 +1,5 @@
 -- pass in the player and if he's crouching, keep the oldest tunnel
-function AlienTeam:RemoveGorgeStructureFromClient(self, techId, clientId, player)
+function AlienTeam:RemoveGorgeStructureFromClient(techId, clientId, player)
 
     local structureTypeTable = self.clientOwnedStructures[clientId]
     

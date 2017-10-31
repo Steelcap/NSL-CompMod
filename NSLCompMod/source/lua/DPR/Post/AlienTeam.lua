@@ -90,7 +90,7 @@ function AlienTeam:AddGorgeStructure(player, structure)
         local numAllowedStructure = LookupTechData(techId, kTechDataMaxAmount, -1) --* self:GetNumHives()
 
         if numAllowedStructure >= 0 and table.icount(structureTypeTable[techId]) > numAllowedStructure then
-            self:RemoveGorgeStructureFromClient(techId, clientId)
+            self:RemoveGorgeStructureFromClient(techId, clientId, player)
         end
 
     end

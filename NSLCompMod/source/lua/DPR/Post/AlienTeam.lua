@@ -13,11 +13,12 @@ function AlienTeam:RemoveGorgeStructureFromClient(techId, clientId, player)
         end    
         
         local removeIndex = 0
-        local structure
+        local structure = nil
 		local skip = false
 		if techId == kTechId.GorgeTunnel and player and player:GetCrouching() then
 			skip = true
 		end
+
         for index, id in ipairs(structureTypeTable[techId])  do
         
             if id and not skip then

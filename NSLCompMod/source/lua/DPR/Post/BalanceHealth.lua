@@ -14,3 +14,5 @@ kBabblerHealth = 11
 kMedpackPickupDelay = 0.56
 
 kDrifterHealth = 210
+
+kSkulkHealth = 90

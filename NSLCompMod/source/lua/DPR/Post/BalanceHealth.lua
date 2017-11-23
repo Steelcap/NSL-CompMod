@@ -15,4 +15,4 @@ kMedpackPickupDelay = 0.56
 
 kDrifterHealth = 210
 
-kSkulkHealth = 90
+kSkulkHealth = 70

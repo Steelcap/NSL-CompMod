@@ -5,22 +5,24 @@ local function NSLTechDataChanges(techData)
         [kTechId.GorgeEgg] = true,
         [kTechId.LerkEgg] = true,
         [kTechId.FadeEgg] = true,
-        [kTechId.OnosEgg] = true
+        [kTechId.OnosEgg] = true,
+		[kTechId.Silence] = true,
+		[kTechId.Focus] = true
     }
 
     for techIndex, record in ipairs(techData) do
         local techDataId = record[kTechDataId]
-
-        if techDataId == kTechId.NutrientMist then
-            record[kTechDataRequiresInfestation] = true
-        elseif techDataId == kTechId.MedPack then
-            record[kCommanderSelectRadius] = 0.1
-        else
-            if techToRemove[techDataId] then
-                table.remove(techData, techIndex)
-            end
-        end
+		if techDataId == kTechId.Observatory then
+            -- observatory has a supply cost
+            record[kTechDataSupply] = kObservatorySupply
+        elseif techDataId == kTechId.SentryBattery then
+            -- sentry battery has a supply cost
+            record[kTechDataSupply] = kSentryBatterySupply
+		elseif techToRemove[techDataId] then
+			table.remove(techData, techIndex)
+		end
     end
+	
 end
 
 local oldBuildTechData = BuildTechData

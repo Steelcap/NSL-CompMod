@@ -6,7 +6,7 @@ Maintained by Steelcap.
 
 ## Changes
 
-### 2018-2-119
+### 2018-2-21
 * Pregame damage only occurs when touching enemy chair/hive  
 
 ###### Aliens  
@@ -41,6 +41,7 @@ Maintained by Steelcap.
 * Armory supply cost 10 from 5
 * Robotics Factory supply cost 10 from 5
 * Sentry Battery supply cost 20 from 0
+* **JP cost up to 25 from 15**
 
 ### 2018-2-18
 * Pregame damage only occurs when touching enemy chair/hive  

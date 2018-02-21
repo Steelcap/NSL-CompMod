@@ -19,6 +19,7 @@ Maintained by Steelcap.
 * Removed the ability to drop lifeform eggs   
 * Mucous adds shield based on maximum health, so increasing biomass will increase mucous shield
 * Increased Gorge cost 12 from 8
+* **Gorge tunnel cost down to 0 from 3**
 * Onos Movement Speed increased from 6.6 to 7.5
 * Cyst unconnected damage 10 from 12
 * Removed Silence

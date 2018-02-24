@@ -53,8 +53,8 @@ end
 
 local buyToRemove = {
     -- Remove Focus and Silence
-    [kTechId.Focus] = true,
 	[kTechId.Silence] =true,
+
 }
 
 local buyToChange = {

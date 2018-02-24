@@ -6,8 +6,7 @@ local function NSLTechDataChanges(techData)
         [kTechId.LerkEgg] = true,
         [kTechId.FadeEgg] = true,
         [kTechId.OnosEgg] = true,
-		[kTechId.Silence] = true,
-		[kTechId.Focus] = true
+		[kTechId.Silence] = true
     }
 
     for techIndex, record in ipairs(techData) do
@@ -18,6 +17,9 @@ local function NSLTechDataChanges(techData)
         elseif techDataId == kTechId.SentryBattery then
             -- sentry battery has a supply cost
             record[kTechDataSupply] = kSentryBatterySupply
+		elseif techDataId == kTechId.Focus then
+			-- focus is now neurotoxin
+			record[kTechDataDisplayName] = "NEUROTOXIN"
 		elseif techToRemove[techDataId] then
 			table.remove(techData, techIndex)
 		end

@@ -1,5 +1,14 @@
--- pass in the player and if he's crouching, keep the oldest tunnel
-function AlienTeam:RemoveGorgeStructureFromClient(self, techId, clientId, player)
+local function ApplyGorgeStructureTheme(structure, player)
+
+    assert(player:isa("Gorge"))
+
+    if structure.SetVariant then
+        structure:SetVariant(player:GetVariant())
+    end
+
+end
+
+function AlienTeam:RemoveGorgeStructureFromClient(techId, clientId, player)
 
     local structureTypeTable = self.clientOwnedStructures[clientId]
     
@@ -13,11 +22,12 @@ function AlienTeam:RemoveGorgeStructureFromClient(self, techId, clientId, player
         end    
         
         local removeIndex = 0
-        local structure
+        local structure = nil
 		local skip = false
 		if techId == kTechId.GorgeTunnel and player and player:GetCrouching() then
 			skip = true
 		end
+
         for index, id in ipairs(structureTypeTable[techId])  do
         
             if id and not skip then
@@ -48,47 +58,38 @@ function AlienTeam:RemoveGorgeStructureFromClient(self, techId, clientId, player
     
 end
 
--- not changed but called in AddGorgeStructure
---TODO: getupvalue
-local function ApplyGorgeStructureTheme(structure, player)
-
-    assert(player:isa("Gorge"))
-    
-    if structure.SetVariant then
-        structure:SetVariant(player:GetVariant())
-    end
-    
-end
-
--- pass player to RGSFC
 function AlienTeam:AddGorgeStructure(player, structure)
 
     if player ~= nil and structure ~= nil then
-    
+
         local clientId = Server.GetOwner(player):GetUserId()
         local structureId = structure:GetId()
         local techId = structure:GetTechId()
-        
+
         if not self.clientOwnedStructures[clientId] then
-            self.clientOwnedStructures[clientId] = { }
+            table.insert(self.clientStructuresOwner, clientId)
+            self.clientOwnedStructures[clientId] = {
+                techIds = {}
+            }
         end
-        
+
         local structureTypeTable = self.clientOwnedStructures[clientId]
-        
+
         if not structureTypeTable[techId] then
-            structureTypeTable[techId] = { }
+            structureTypeTable[techId] = {}
+            table.insert(structureTypeTable.techIds, techId)
         end
-        
+
         table.insertunique(structureTypeTable[techId], structureId)
-        
+
         ApplyGorgeStructureTheme(structure, player)
-        
+
         local numAllowedStructure = LookupTechData(techId, kTechDataMaxAmount, -1) --* self:GetNumHives()
-        
-        if numAllowedStructure >= 0 and table.count(structureTypeTable[techId]) > numAllowedStructure then
-            self:RemoveGorgeStructureFromClient(self, techId, clientId, player)
+
+        if numAllowedStructure >= 0 and table.icount(structureTypeTable[techId]) > numAllowedStructure then
+            self:RemoveGorgeStructureFromClient(techId, clientId, player)
         end
-        
+
     end
-    
+
 end

@@ -7,6 +7,48 @@ Maintained by Steelcap.
 ## Changes
 
 
+### 2018-2-25
+* Pregame damage only occurs when touching enemy chair/hive  
+
+###### Aliens  
+* Disabled Regeneration within 2 seconds of taking damage
+* Remove alien abilities if required biomass is lost from hive death  
+* Soft cap on all alien healing over 16% per second, reducing effectiveness by 80%  
+* Cysts will be damaged while unconnected  
+* Cyst max hp reduced to 180  
+* Cyst maturation rate reduced to 15 from 45
+* Removed the ability to drop lifeform eggs   
+* Mucous adds shield based on maximum health, so increasing biomass will increase mucous shield
+* Increased Gorge cost 12 from 8
+* **Gorge tunnel cost down to 0 from 3**
+* Onos Movement Speed increased from 6.6 to 7.5
+* Cyst unconnected damage 10 from 12
+* Removed Silence
+* Removed Focus
+* Removed Lifeform Egg purchase by commander
+* Drifter Supply cost 15 from 10
+* Whip supply cost 15 from 5
+* Support Structure (shift/shade/crag) supply 10 from 5
+* Alien Supply = 50 + 50 per hive (100/150/200)
+* Onos charge now only minorly knocks back marines, does not knock back exo
+* Spore moved to biomass 6
+* Babblers no longer reduce damage
+* Babbler HP to 11
+* Added Neurotoxin to replace Focus
+* **Neurotoxin deals 6 damage per second per stack (10 for fade, 8 for Onos, and 5 for lerk)**
+
+###### Marines  
+* Starting P-Res for Marines increased to 20 from 15   
+* Removed lockout timer for entering exos bought by teammates   
+* Observatory supply cost to 30 from 0
+* Arc supply cost 15 from 10
+* Armory supply cost 10 from 5
+* Robotics Factory supply cost 10 from 5
+* Sentry Battery supply cost 20 from 0
+* JP cost up to 25 from 15
+* Medpacks scale down regen and scale up instant healing for each level of armor upgrade
+
+
 ### 2018-2-24
 * Pregame damage only occurs when touching enemy chair/hive  
 

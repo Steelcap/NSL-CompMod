@@ -44,28 +44,28 @@ function NS2Gamerules_GetUpgradedAlienDamage( target, attacker, doer, damage, ar
             damageBonus = kOnosNeuroToxinDamage
         end
         if Server then
-			local dotMarker = CreateEntity(DotMarker.kMapName, target:GetEngagementPoint(), attacker:GetTeamNumber())
-			dotMarker:SetDamageType(kDamageType.Gas)
-			dotMarker:SetLifeTime(0.1 + veilLevel)
-			dotMarker:SetDamage(damageBonus)
-			dotMarker:SetRadius(0.1)
-			dotMarker:SetDamageIntervall(1)
-			dotMarker:SetDotMarkerType(DotMarker.kType.SingleTarget)
-			dotMarker:SetTargetEffectName("poison_dart_trail")
-			dotMarker:SetDeathIconIndex(kDeathMessageIcon.SporeCloud)
-			dotMarker:SetOwner(attacker)
-			dotMarker:SetAttachToTarget(target, target:GetEngagementPoint())
-		
-			dotMarker:SetDestroyCondition(                
-				function (self, target)
-					return not target:GetIsAlive()
-				end                 
-			)
-			dotMarker:ImmuneCondition(                
-				function (self, target)
-					return not target:GetIsAlive()
-				end                 
-			)
+				local dotMarker = CreateEntity(DotMarker.kMapName, target:GetOrigin(), attacker:GetTeamNumber())
+				dotMarker:SetDamageType(kDamageType.Gas)
+				dotMarker:SetLifeTime(0.1 + veilLevel)
+				dotMarker:SetDamage(damageBonus)
+				dotMarker:SetRadius(0.1)
+				dotMarker:SetDamageIntervall(1)
+				dotMarker:SetDotMarkerType(DotMarker.kType.SingleTarget)
+				dotMarker:SetTargetEffectName("poison_dart_trail")
+				dotMarker:SetDeathIconIndex(kDeathMessageIcon.SporeCloud)
+				dotMarker:SetOwner(attacker)
+				dotMarker:SetAttachToTarget(target, target:GetEngagementPoint())
+			
+				dotMarker:SetDestroyCondition(                
+					function (self, target)
+						return not target:GetIsAlive()
+					end                 
+				)
+				dotMarker:ImmuneCondition(                
+					function (self, target)
+						return not target:GetIsAlive()
+					end                 
+				)
 		end
     end
     

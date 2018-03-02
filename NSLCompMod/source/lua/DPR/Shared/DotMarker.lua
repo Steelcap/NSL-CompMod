@@ -249,30 +249,31 @@ function DotMarker:SetAttachToTarget(target, impactPoint)
 end
 
 local function ApplyDamage(self, targetList)
-	if targetList then
-		for index, targetEntry in ipairs(targetList) do
-		
-			local entity = Shared.GetEntity(targetEntry.id)     
 
-			if entity and self.destroyCondition and self.destroyCondition(self, entity) then
-				DestroyEntity(self)
-				break
-			end
+    for index, targetEntry in ipairs(targetList) do
+    
+        local entity = Shared.GetEntity(targetEntry.id)     
 
-			if entity and self.targetIds[entity:GetId()] and entity:GetCanTakeDamage() and (not self.immuneCondition or not self.immuneCondition(self, entity))  then
+        if entity and self.destroyCondition and self.destroyCondition(self, entity) then
+            DestroyEntity(self)
+            break
+        end
+        
+        if entity and self.targetIds[entity:GetId()] and entity:GetCanTakeDamage() and (not self.immuneCondition or not self.immuneCondition(self, entity)) then
 
-				local worldImpactPoint = entity:GetCoords():TransformPoint(targetEntry.impactPoint)
-				
-				--local previousHealthScalar = entity:GetHealthScalar()
-				-- we don't need to specify a surface here, since dot marker can only damage actual targets and ignores world geometry
-				self:DoDamage(targetEntry.damage * self.damageIntervall, entity, worldImpactPoint, -targetEntry.impactPoint, "none")
-				--local newHealthScalar = entity:GetHealthScalar()
-			
-				entity:TriggerEffects(self.targetEffectName, { doer = self, effecthostcoords = Coords.GetTranslation(worldImpactPoint) })
-			end
-			
-		end
-	else
+            local worldImpactPoint = entity:GetCoords():TransformPoint(targetEntry.impactPoint)
+            
+            --local previousHealthScalar = entity:GetHealthScalar()
+            -- we don't need to specify a surface here, since dot marker can only damage actual targets and ignores world geometry
+            self:DoDamage(targetEntry.damage * self.damageIntervall, entity, worldImpactPoint, -targetEntry.impactPoint, "none")
+            --local newHealthScalar = entity:GetHealthScalar()
+        
+            --entity:TriggerEffects(self.targetEffectName, { doer = self, effecthostcoords = Coords.GetTranslation(worldImpactPoint) })
+            
+        end
+        
+    end
+	if self.targetId then
 		local entity = Shared.GetEntity(self.targetId)
 		if entity and entity:GetCanTakeDamage() and (not self.immuneCondition or not self.immuneCondition(self, entity))  then
 			local worldImpactPoint = entity:GetCoords():TransformPoint(entity:GetEngagementPoint())
@@ -323,19 +324,12 @@ function DotMarker:OnUpdate(deltaTime)
             local targetList = self.targetList
             
             if self.dotMarkerType == DotMarker.kType.SingleTarget then
-
+			
+				self.targetList = nil
                 -- single target will deal damage only to the attached target (used for poison dart)
-                if not targetList and self.targetId ~= Entity.invalidId then
+                if self.targetId ~= Entity.invalidId then
                     
-                    local target = Shared.GetEntity(self.targetId)
-
-                    if target then
-
-                        self.targetList = {}
-                        table.insert(self.targetList, ConstructTargetEntry(self:GetOrigin(), target, self.damage, self.radius, true, self.impactPoint, self.fallOffFunc) )
-                        targetList = self.targetList
-                        self.targetIds[self.targetId] = true
-                    end
+                    ApplyDamage(self)
                     
                 end
 
@@ -346,9 +340,12 @@ function DotMarker:OnUpdate(deltaTime)
                 
             elseif self.dotMarkerType == DotMarker.kType.Static then
             
-                -- statics do not change their target ever
-                targetList = nil
-				ApplyDamage(self)
+                -- calculate the target list once and reuse it later (used for bilebomb)
+                if not targetList then
+                    self.targetList, self.targetIds = ConstructCachedTargetList(self:GetOrigin(), GetEnemyTeamNumber(self:GetTeamNumber()), self.damage, self.radius, self.fallOffFunc)
+                    targetList = self.targetList
+                end
+            
             end
             
             if targetList then

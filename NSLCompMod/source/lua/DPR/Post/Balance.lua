@@ -8,4 +8,4 @@ kMucousShieldPercent = 0.15
 
 kSupplyPerTechpoint = 50
 
-kJetpackCost = 25
+kJetpackCost = 20

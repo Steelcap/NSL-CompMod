@@ -249,7 +249,7 @@ function DotMarker:SetAttachToTarget(target, impactPoint)
 end
 
 local function ApplyDamage(self, targetList)
-	if targetList) then
+	if targetList then
 		for index, targetEntry in ipairs(targetList) do
 		
 			local entity = Shared.GetEntity(targetEntry.id)     
@@ -278,7 +278,7 @@ local function ApplyDamage(self, targetList)
 			local entity = Shared.GetEntity(self.targetId)
 			if entity and entity:GetCanTakeDamage() and (not self.immuneCondition or not self.immuneCondition(self, entity))  then
 				local worldImpactPoint = entity:GetCoords():TransformPoint(entity:GetEngagementPoint())
-				self:DoDamage(targetEntry.damage * self.damageIntervall, entity, worldImpactPoint, worldImpactPoint, "none")
+				self:DoDamage(self.damage * self.damageIntervall, entity, worldImpactPoint, worldImpactPoint, "none")
 				entity:TriggerEffects(self.targetEffectName, { doer = self, effecthostcoords = Coords.GetTranslation(worldImpactPoint) })
 			end
 		end

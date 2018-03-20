@@ -20,6 +20,7 @@ local function NSLTechDataChanges(techData)
 		elseif techDataId == kTechId.Focus then
 			-- focus is now neurotoxin
 			record[kTechDataDisplayName] = "NEUROTOXIN"
+			record[kTechDataTooltipInfo] = "Each hit inflicts a poison toxin, hurting marines over time."
 		elseif techToRemove[techDataId] then
 			table.remove(techData, techIndex)
 		end

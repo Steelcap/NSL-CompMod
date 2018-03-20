@@ -1,7 +1,8 @@
-kAlienNeuroToxinDamage = 6
-kFadeNeuroToxinDamage = 10
-kLerkNeuroToxinDamage = 5
-kOnosNeuroToxinDamage = 8
+kSkulkNeuroToxinDamage = 6
+kGorgeNeuroToxinDamage = 5
+kFadeNeuroToxinDamage = 8
+kLerkNeuroToxinDamage = 4
+kOnosNeuroToxinDamage = 6
 
 --Utility function to apply chamber-upgraded modifications to alien damage
 --Note: this should _always_ be called BEFORE damage-type specific modifications are done (i.e. Light vs Normal vs Structural, etc)
@@ -35,13 +36,15 @@ function NS2Gamerules_GetUpgradedAlienDamage( target, attacker, doer, damage, ar
     
     if attacker:GetHasUpgrade( kTechId.Focus ) and DoesFocusAffectAbility(weapon) then
         local veilLevel = GetVeilLevel( kTeam2Index )
-        local damageBonus = kAlienNeuroToxinDamage
+        local damageBonus = kSkulkNeuroToxinDamage
         if weapon == kTechId.Swipe or weapon == kTechId.Stab then
             damageBonus = kFadeNeuroToxinDamage
         elseif weapon == kTechId.LerkBite then 
             damageBonus = kLerkNeuroToxinDamage
 		elseif weapon == kTechId.Gore then
             damageBonus = kOnosNeuroToxinDamage
+		elseif weapon == kTechId.Spit then
+            damageBonus = kGorgeNeuroToxinDamage
         end
         if Server then
 				local dotMarker = CreateEntity(DotMarker.kMapName, target:GetOrigin(), attacker:GetTeamNumber())

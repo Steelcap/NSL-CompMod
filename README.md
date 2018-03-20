@@ -2,6 +2,7 @@
 A testing ground for NSL-CompMod, a balance and feature mod for Natural Selection 2, used by the Natural Selection League. For more information, please visit the [NSL website](http://ensl.org).  
 This Beta mod is on the Steam Workshop with ID [2E135822](https://steamcommunity.com/sharedfiles/filedetails/?id=773019682). The code is available at this [GitHub repo](https://github.com/Steelcap/NSL-CompMod/tree/beta).  
 The main mod is on the Steam Workshop with ID [2ADC73ED](https://steamcommunity.com/sharedfiles/filedetails/?id=719090669). The code is available at this [GitHub repo](https://github.com/Steelcap/NSL-CompMod).  
+Each update snapshots all changes from vanilla to CompMod.
 Maintained by Steelcap.
 
 ## Changes

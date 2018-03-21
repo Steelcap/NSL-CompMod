@@ -37,6 +37,7 @@ Maintained by Steelcap.
 * Babbler HP to 11
 * Added Neurotoxin to replace Focus
 * **Neurotoxin deals damage per second per stack (8 for fade, 6 for Onos and Skulk, and 4 for lerk, 5 for gorge)**
+* **Fade Armor from 80 to 110 (Carapace from 120 to 150)**
 
 ###### Marines  
 * Starting P-Res for Marines increased to 20 from 15   

@@ -1,8 +1,13 @@
 
-kGorgeCost = 12
-kGorgeTunnelCost = 0
+kGorgeCost = 8
+kLerkCost = 21
+kFadeCost = 40
+kOnosCost = 66
+
+kGorgeTunnelCost = 3
 
 kMarineInitialIndivRes = 20
+kAlienInitialIndivRes = 15
 
 kMucousShieldPercent = 0.15
 

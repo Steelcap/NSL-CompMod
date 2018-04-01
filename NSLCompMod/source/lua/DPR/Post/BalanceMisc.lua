@@ -23,3 +23,5 @@ kObservatorySupply = 30
 
 -- Increases the delay between alien attacks by the given value in percentage while using the Focus upgrade.
 kFocusAttackSlowAtMax = 0.05
+
+kHandGrenadeWeight = 0.01

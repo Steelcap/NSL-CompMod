@@ -25,3 +25,5 @@ kObservatorySupply = 30
 kFocusAttackSlowAtMax = 0.05
 
 kHandGrenadeWeight = 0.01
+
+kAlienStructureMoveSpeed = 2

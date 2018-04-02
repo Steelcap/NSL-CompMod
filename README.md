@@ -8,6 +8,54 @@ Maintained by Steelcap.
 ## Changes
 
 
+### 2018-4-2
+* Pregame damage only occurs when touching enemy chair/hive
+* Removed Healthbars for anyone other than commander and spectators 
+
+###### Aliens  
+* Starting P-Res for Aliens increased to 15 from 12 
+* Disabled Regeneration within 2 seconds of taking damage
+* Remove alien abilities if required biomass is lost from hive death  
+* Soft cap on all alien healing over 16% per second, reducing effectiveness by 80%  
+* Cysts will be damaged while unconnected  
+* Cyst max hp reduced to 180  
+* Cyst maturation rate reduced to 15 from 45
+* Removed the ability to drop lifeform eggs   
+* Increased Lerk cost to 21 from 18
+* Increased Fade cost to 40 from 37
+* Increased Onos cost to 66 from 62
+* Onos Movement Speed increased from 6.6 to 7.5
+* Cyst unconnected damage 10 from 12
+* Removed Silence
+* Removed Focus
+* Removed Lifeform Egg purchase by commander
+* Drifter Supply cost 15 from 10
+* Whip supply cost 15 from 5
+* Support Structure (shift/shade/crag) supply 10 from 5
+* Alien Supply = 50 + 50 per hive (100/150/200)
+* Onos charge now only minorly knocks back marines, does not knock back exo
+* Spore moved to biomass 6
+* Babblers no longer reduce damage
+* Babbler HP to 11
+* Added Neurotoxin to replace Focus
+* Neurotoxin deals damage per second per stack (8 for fade, 6 for Onos and Skulk, and 4 for lerk, 5 for gorge)
+* Fade Armor from 80 to 100 (Carapace from 120 to 140)
+* **Structural Movement (other than whips) increased by 33%**
+* **Reduced Mature HP of Whips,Crags,Shades, and Shifts**
+
+###### Marines  
+* Starting P-Res for Marines increased to 20 from 15   
+* Removed lockout timer for entering exos bought by teammates   
+* Observatory supply cost to 30 from 0
+* Arc supply cost 15 from 10
+* Armory supply cost 10 from 5
+* Robotics Factory supply cost 10 from 5
+* Sentry Battery supply cost 20 from 0
+* JP cost up to 20 from 15
+* Medpacks scale down regen and scale up instant healing for each level of armor and weapon upgrade
+* Medpack Pickup delay from .45 to .56
+* Removed Friendly Fire from Flamethrower persistant Flame
+
 
 ### 2018-4-1
 * Pregame damage only occurs when touching enemy chair/hive

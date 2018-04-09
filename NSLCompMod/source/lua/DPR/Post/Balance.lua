@@ -14,3 +14,10 @@ kMucousShieldPercent = 0.15
 kSupplyPerTechpoint = 50
 
 kJetpackCost = 20
+kObservatoryScanCost = 2
+
+kTechMed1ResearchCost = 10
+kTechMed2ResearchCost = 20
+
+kTechMed1ResearchTime = 60
+kTechMed2ResearchTime = 90

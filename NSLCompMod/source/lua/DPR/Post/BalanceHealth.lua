@@ -4,7 +4,7 @@ kMinMatureCystHealth = 180 kMinCystScalingDistance = 1 kMaxCystScalingDistance =
 
 kBabblerHealth = 11
 
-kMedpackPickupDelay = 0.56
+kMedpackPickupDelay = 0.45
 
 kFadeArmor = 100 
 kFadeArmorFullyUpgradedAmount = 140

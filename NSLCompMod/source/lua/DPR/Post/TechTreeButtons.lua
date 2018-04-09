@@ -269,6 +269,9 @@ kTechIdToMaterialOffset[kTechId.DropJetpack] = 89
 kTechIdToMaterialOffset[kTechId.PhaseTech] = 90
 kTechIdToMaterialOffset[kTechId.AmmoPack] = 91
 kTechIdToMaterialOffset[kTechId.MedPack] = 92
+--Comp Mod
+kTechIdToMaterialOffset[kTechId.MedTech1] = 92
+kTechIdToMaterialOffset[kTechId.MedTech2] = 92
 kTechIdToMaterialOffset[kTechId.CatPackTech] = 164
 kTechIdToMaterialOffset[kTechId.CatPack] = 164
 kTechIdToMaterialOffset[kTechId.PowerPoint] = 93

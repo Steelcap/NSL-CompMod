@@ -25,12 +25,17 @@ local function NSLTechDataChanges(techData)
 			table.remove(techData, techIndex)
 		end
     end
-	
+
 end
 
 local oldBuildTechData = BuildTechData
 function BuildTechData()
     local techData = oldBuildTechData()
     NSLTechDataChanges(techData)
+		
+	local medtech1 = { [kTechDataId] = kTechId.MedTech1,       [kTechDataDisplayName] = "Medpack Tech 1", [kTechDataTooltipInfo] = "Improves Medpacks", [kTechDataCostKey] = kTechMed1ResearchCost,             [kTechDataResearchTimeKey] = kTechMed1ResearchTime, }
+	local medtech2 = { [kTechDataId] = kTechId.MedTech2,       [kTechDataDisplayName] = "Medpack Tech 2", [kTechDataTooltipInfo] = "Improves Medpacks", [kTechDataCostKey] = kTechMed2ResearchCost,             [kTechDataResearchTimeKey] = kTechMed2ResearchTime, }
+	table.insert(techData, medtech1)
+	table.insert(techData, medtech2)
     return techData
 end

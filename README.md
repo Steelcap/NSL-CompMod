@@ -7,7 +7,7 @@ Maintained by Steelcap.
 
 ## Changes
 
-### 2018-4-9
+### 2018-4-10
 * Pregame damage only occurs when touching enemy chair/hive
 * Removed Healthbars for anyone other than commander and spectators 
 
@@ -53,6 +53,7 @@ Maintained by Steelcap.
 * JP cost up to 20 from 15
 * Removed Friendly Fire from Flamethrower persistant Flame
 * **Medpacks scale up instant health and scale down regen per level of MedPackTech researched on Command Station**
+* **Medpack Tech 1 requires Armory and Medpack Tech 2 requires Advanced Armory**
 * **Scanner Sweep cost from 3 to 2**
 
 

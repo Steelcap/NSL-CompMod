@@ -54,7 +54,7 @@ Maintained by Steelcap.
 * Removed Friendly Fire from Flamethrower persistant Flame
 * **Medpacks scale up instant health and scale down regen per level of MedPackTech researched on Command Station**
 * **Medpack Tech 1 requires Armory and Medpack Tech 2 requires Advanced Armory**
-* **Scanner Sweep cost from 3 to 2**
+
 
 
 ### 2018-4-2

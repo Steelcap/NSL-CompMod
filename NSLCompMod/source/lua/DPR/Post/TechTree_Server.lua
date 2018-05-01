@@ -16,13 +16,12 @@ function TechTree:AddUpgradeNode(techId, prereq1, prereq2)
 end
 
 local researchToRemove = {
-    -- Remove PowerSurge research
-    [kTechId.PowerSurgeTech] = true
+
 }
 
 local researchToChange = {
-    -- Move Spores to bio 7
-    [kTechId.Spores] = {kTechId.Spores, kTechId.BioMassSeven, kTechId.None, kTechId.AllAliens}
+    -- Move Spores to bio 6
+    [kTechId.Spores] = {kTechId.Spores, kTechId.BioMassSix, kTechId.None, kTechId.AllAliens}
 }
 
 local oldAddResearchNode = TechTree.AddResearchNode
@@ -39,8 +38,6 @@ function TechTree:AddResearchNode(techId, prereq1, prereq2, addOnTechId)
 end
 
 local targetedActivationToChange = {
-    -- Move PowerSurge to robo
-    [kTechId.PowerSurge] = {kTechId.PowerSurge, kTechId.RoboticsFactory}
 }
 
 local oldAddTargetedActivation = TechTree.AddTargetedActivation
@@ -55,13 +52,12 @@ function TechTree:AddTargetedActivation(techId, prereq1, prereq2)
 end
 
 local buyToRemove = {
-    -- Remove Focus
-    [kTechId.Focus] = true,
+    -- Remove Focus and Silence
+	[kTechId.Silence] =true,
+
 }
 
 local buyToChange = {
-    -- Move Silence to Veils
-    [kTechId.Silence] = {kTechId.Silence, kTechId.Veil, kTechId.None, kTechId.AllAliens},
 }
 
 local oldAddBuyNode = TechTree.AddBuyNode

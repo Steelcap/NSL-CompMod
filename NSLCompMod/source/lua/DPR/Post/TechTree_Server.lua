@@ -52,8 +52,6 @@ function TechTree:AddTargetedActivation(techId, prereq1, prereq2)
 end
 
 local buyToRemove = {
-    -- Remove Focus and Silence
-	[kTechId.Silence] =true,
 
 }
 

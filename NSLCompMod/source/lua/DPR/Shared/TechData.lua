@@ -4,8 +4,7 @@ local function NSLTechDataChanges(techData)
         [kTechId.GorgeEgg] = true,
         [kTechId.LerkEgg] = true,
         [kTechId.FadeEgg] = true,
-        [kTechId.OnosEgg] = true,
-		[kTechId.Silence] = true
+        [kTechId.OnosEgg] = true
     }
 
     for techIndex = #techData, 1, -1 do

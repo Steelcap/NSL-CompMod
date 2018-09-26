@@ -3,9 +3,10 @@ local kBurnUpdateRate = 0.5 -- same as vanilla
 
 -- fire from cluster grenades burns for less time
 local function SharedUpdate(self, deltaTime)
-    PROFILE("FireMixin:OnUpdate")
+    PROFILE("FireMixin:UpdateFireState")
+
     if Client then
-        UpdateFireMaterial(self)
+        self:UpdateFireMaterial()
         self:_UpdateClientFireEffects()
     end
 
@@ -16,39 +17,44 @@ local function SharedUpdate(self, deltaTime)
     if Server then
         local time = Shared.GetTime()
         if self:GetIsAlive() and (not self.timeLastFireDamageUpdate or self.timeLastFireDamageUpdate + kBurnUpdateRate <= time) then
+
             local damageOverTime = kBurnUpdateRate * kBurnDamagePerSecond
+
+            if self.GetReceivesStructuralDamage and self:GetReceivesStructuralDamage() then
+                damageOverTime = damageOverTime * kStructuralDamageScalar
+            end
+
             if self.GetIsFlameAble and self:GetIsFlameAble() then
                 damageOverTime = damageOverTime * kFlameableMultiplier
             end
 
-            local attacker = nil
+            local attacker
             if self.fireAttackerId ~= Entity.invalidId then
                 attacker = Shared.GetEntity(self.fireAttackerId)
             end
 
-            local doer = nil
+            local doer
             if self.fireDoerId ~= Entity.invalidId then
                 doer = Shared.GetEntity(self.fireDoerId)
             end
 
-            local killedFromDamage, damageDone = self:DeductHealth(damageOverTime, attacker, doer)
+            local _, damageDone = self:DeductHealth(damageOverTime, attacker, doer)
 
             if attacker then
-                SendDamageMessage(attacker, self, damageDone, self:GetOrigin(), damageDone)
+                SendDamageMessage( attacker, self, damageDone, self:GetOrigin(), damageDone )
             end
 
             self.timeLastFireDamageUpdate = time
-        end
 
-        local burnDuration = kFlamethrowerBurnDuration
+        end
 
         -- Check what burned us, change the burn time
         if self.fireDoerName == ClusterGrenade.kMapName then
-            burnDuration = kClusterGrenadeBurnDuration
+            self.timeBurnDuration = kClusterGrenadeBurnDuration
         end
 
         -- See if we put ourselves out
-        if time - self.timeBurnRefresh > burnDuration then
+        if time - self.timeBurnRefresh > self.timeBurnDuration then
             self:SetGameEffectMask(kGameEffect.OnFire, false)
         end
     end
@@ -89,5 +95,12 @@ function FireMixin:SetOnFire(attacker, doer)
         self.timeBurnRefresh = time
         self.timeLastFireDamageUpdate = time
         self.isOnFire = true
+        
+        --Flat restriction to single-shot player burn time. ideally will diminish "burn-out" deaths
+        if self:isa("Player") then
+            self.timeBurnDuration = kFlamethrowerBurnDuration
+        else
+            self.timeBurnDuration = math.min(self.timeBurnDuration + kFlamethrowerBurnDuration, kFlamethrowerMaxBurnDuration)
+        end
     end
 end

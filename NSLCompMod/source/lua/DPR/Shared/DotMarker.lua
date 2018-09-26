@@ -12,6 +12,7 @@
 Script.Load("lua/ScriptActor.lua")
 Script.Load("lua/TeamMixin.lua")
 Script.Load("lua/EntityChangeMixin.lua")
+Script.Load("lua/LOSMixin.lua")
 Script.Load("lua/DamageMixin.lua")
 Script.Load("lua/OwnerMixin.lua")
 
@@ -34,6 +35,7 @@ local networkVars =
 }
 
 AddMixinNetworkVars(TeamMixin, networkVars)
+AddMixinNetworkVars(LOSMixin, networkVars)
 
 DotMarker.kType = enum({'Static', 'Dynamic', 'SingleTarget'})
 
@@ -90,7 +92,7 @@ local function ConstructTargetEntry(origin, hitEntity, damage, radius, ignoreLos
 
     local entry = {}
     
-    if not hitEntity or not hitEntity:GetCanTakeDamage() or GetIsVortexed(hitEntity) then
+    if not hitEntity or not hitEntity:GetCanTakeDamage() then
         return nil
     end
 
@@ -158,6 +160,7 @@ function DotMarker:OnCreate()
     InitMixin(self, TeamMixin)
     InitMixin(self, EntityChangeMixin)
     InitMixin(self, DamageMixin)
+    InitMixin(self, LOSMixin)
     
     self.targetList = nil
     self.damageIntervall = 1
@@ -170,7 +173,12 @@ function DotMarker:OnCreate()
     self.timeLastUpdate = Shared.GetTime()
     self.deathIconIndex = kDeathMessageIcon.None
     self.targetIds = {}
+    self.affectedByCrush = false
 
+end
+
+function DotMarker:OverrideCheckVision()
+    return false
 end
 
 function DotMarker:TimeUp()
@@ -207,13 +215,13 @@ function DotMarker:GetDamageType()
 end
 
 function DotMarker:SetTechId( id )
-	self.techId = id
+    self.techId = id
 end
 
 function DotMarker:GetTechId()
-	return self.techId
+    return self.techId
 end
-	
+    
 
 -- this is per second
 function DotMarker:SetDamage(damage)
@@ -230,6 +238,14 @@ end
 
 function DotMarker:GetDeathIconIndex()
     return self.deathIconIndex
+end
+
+function DotMarker:SetIsAffectedByCrush(affectedByCrush)
+    self.affectedByCrush = affectedByCrush
+end
+
+function DotMarker:GetIsAffectedByCrush()
+    return self.affectedByCrush
 end
 
 function DotMarker:SetAttachToTarget(target, impactPoint)
@@ -249,40 +265,42 @@ function DotMarker:SetAttachToTarget(target, impactPoint)
 end
 
 local function ApplyDamage(self, targetList)
-	if targetList then
-		for index, targetEntry in ipairs(targetList) do
-		
-			local entity = Shared.GetEntity(targetEntry.id)     
 
-			if entity and self.destroyCondition and self.destroyCondition(self, entity) then
-				DestroyEntity(self)
-				break
-			end
-			
-			if entity and self.targetIds[entity:GetId()] and entity:GetCanTakeDamage() and (not self.immuneCondition or not self.immuneCondition(self, entity)) then
+    if targetList then
+        for index, targetEntry in ipairs(targetList) do
+        
+            local entity = Shared.GetEntity(targetEntry.id)     
 
-				local worldImpactPoint = entity:GetCoords():TransformPoint(targetEntry.impactPoint)
-				
-				--local previousHealthScalar = entity:GetHealthScalar()
-				-- we don't need to specify a surface here, since dot marker can only damage actual targets and ignores world geometry
-				self:DoDamage(targetEntry.damage * self.damageIntervall, entity, worldImpactPoint, -targetEntry.impactPoint, "none")
-				--local newHealthScalar = entity:GetHealthScalar()
-			
-				--entity:TriggerEffects(self.targetEffectName, { doer = self, effecthostcoords = Coords.GetTranslation(worldImpactPoint) })
-				
-			end
-			
-		end
-	else
-		if self.targetId then
-			local entity = Shared.GetEntity(self.targetId)
-			if entity and entity:GetCanTakeDamage() and (not self.immuneCondition or not self.immuneCondition(self, entity))  then
-				local worldImpactPoint = entity:GetCoords():TransformPoint(entity:GetEngagementPoint())
-				self:DoDamage(self.damage * self.damageIntervall, entity, worldImpactPoint, worldImpactPoint, "none")
-				entity:TriggerEffects(self.targetEffectName, { doer = self, effecthostcoords = Coords.GetTranslation(worldImpactPoint) })
-			end
-		end
-	end
+            if entity and self.destroyCondition and self.destroyCondition(self, entity) then
+                DestroyEntity(self)
+                break
+            end
+            
+            if entity and self.targetIds[entity:GetId()] and entity:GetCanTakeDamage() and (not self.immuneCondition or not self.immuneCondition(self, entity)) then
+
+                local worldImpactPoint = entity:GetCoords():TransformPoint(targetEntry.impactPoint)
+                
+                --local previousHealthScalar = entity:GetHealthScalar()
+                -- we don't need to specify a surface here, since dot marker can only damage actual targets and ignores world geometry
+                self:DoDamage(targetEntry.damage * self.damageIntervall, entity, worldImpactPoint, -targetEntry.impactPoint, "none")
+                --local newHealthScalar = entity:GetHealthScalar()
+            
+                --entity:TriggerEffects(self.targetEffectName, { doer = self, effecthostcoords = Coords.GetTranslation(worldImpactPoint) })
+                
+            end
+            
+        end
+    else
+        if self.targetId then
+            local entity = Shared.GetEntity(self.targetId)
+            if entity and entity:GetCanTakeDamage() and (not self.immuneCondition or not self.immuneCondition(self, entity))  then
+                local worldImpactPoint = entity:GetCoords():TransformPoint(entity:GetEngagementPoint())
+                self:DoDamage(self.damage * self.damageIntervall, entity, worldImpactPoint, worldImpactPoint, "none")
+                entity:TriggerEffects(self.targetEffectName, { doer = self, effecthostcoords = Coords.GetTranslation(worldImpactPoint) })
+            end
+        end
+    end
+
 end
 
 function DotMarker:OnEntityChange(oldId)
@@ -306,10 +324,6 @@ function DotMarker:SetDestroyCondition(func)
     self.destroyCondition = func
 end
 
-function DotMarker:ImmuneCondition(func)
-    self.immuneCondition = func
-end
-
 function DotMarker:OnUpdate(deltaTime)
 
     if Server then
@@ -326,8 +340,8 @@ function DotMarker:OnUpdate(deltaTime)
             local targetList = self.targetList
             
             if self.dotMarkerType == DotMarker.kType.SingleTarget then
-			
-				self.targetList = nil
+            
+                self.targetList = nil
                 -- single target will deal damage only to the attached target (used for poison dart)
                 if self.targetId ~= Entity.invalidId then
                     

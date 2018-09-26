@@ -1,3 +1,37 @@
+-- ======= Copyright (c) 2003-2012, Unknown Worlds Entertainment, Inc. All rights reserved. =======
+--
+-- lua\TechTreeButtons.lua
+--
+--    Created by:   Charlie Cleveland (charlie@unknownworlds.com)
+--
+-- Hard-coded data which maps tech tree constants to indices into a texture. Used to display
+-- icons in the commander build menu and alien buy menu.
+--
+-- ========= For more information, visit us at http://www.unknownworlds.com =====================
+
+-- These are the icons that appear next to alerts or as hotkey icons.
+-- Icon size should be 20x20. Also used for the alien buy menu.
+function CommanderUI_Icons()
+
+    local player = Client.GetLocalPlayer()
+    if(player and (player:isa("Alien") or player:isa("AlienCommander"))) then
+        return "alien_upgradeicons"
+    end
+    
+    return "marine_upgradeicons"
+
+end
+
+function CommanderUI_MenuImageSize()
+
+    local player = Client.GetLocalPlayer()
+    if(player and player:isa("AlienCommander")) then
+        return 640, 1040
+    end
+    
+    return 960, 960
+    
+end
 
 -- Init icon offsets.
 local kTechIdToMaterialOffset = {}
@@ -151,48 +185,23 @@ kTechIdToMaterialOffset[kTechId.PowerSurgeTech] = 119
 kTechIdToMaterialOffset[kTechId.EvolveBombard] = 60
 
 ----Crag-Hive
-kTechIdToMaterialOffset[kTechId.UpgradeCrushShell] = 172
-kTechIdToMaterialOffset[kTechId.CrushShell] = 172
-kTechIdToMaterialOffset[kTechId.Crush] = 172
-
-kTechIdToMaterialOffset[kTechId.UpgradeCarapaceShell] = 61
-kTechIdToMaterialOffset[kTechId.CarapaceShell] = 61
+kTechIdToMaterialOffset[kTechId.Vampirism] = 173
 kTechIdToMaterialOffset[kTechId.Carapace] = 61
-
-kTechIdToMaterialOffset[kTechId.UpgradeRegenerationShell] = 62
-kTechIdToMaterialOffset[kTechId.RegenerationShell] = 62
 kTechIdToMaterialOffset[kTechId.Regeneration] = 62
 
 ----Shift-Hive
-kTechIdToMaterialOffset[kTechId.UpgradeAdrenalineSpur] = 63
-kTechIdToMaterialOffset[kTechId.AdrenalineSpur] = 63
 kTechIdToMaterialOffset[kTechId.Adrenaline] = 63
-
-kTechIdToMaterialOffset[kTechId.UpgradeCeleritySpur] = 64
-kTechIdToMaterialOffset[kTechId.CeleritySpur] = 64
 kTechIdToMaterialOffset[kTechId.Celerity] = 64
-
-kTechIdToMaterialOffset[kTechId.UpgradeSilenceSpur] = 65
-kTechIdToMaterialOffset[kTechId.SilenceSpur] = 65
-kTechIdToMaterialOffset[kTechId.Silence] = 65
+kTechIdToMaterialOffset[kTechId.Crush] = 172
 
 kTechIdToMaterialOffset[kTechId.Sneak] = 65
 
 ----Shade-Hive
-kTechIdToMaterialOffset[kTechId.UpgradeVampirismVeil] = 173
-kTechIdToMaterialOffset[kTechId.VampirismVeil] = 173
-kTechIdToMaterialOffset[kTechId.Vampirism] = 173
-
-kTechIdToMaterialOffset[kTechId.UpgradeFocusVeil] = 114
-kTechIdToMaterialOffset[kTechId.FocusVeil] = 114
-kTechIdToMaterialOffset[kTechId.Focus] = 114
-
-kTechIdToMaterialOffset[kTechId.UpgradeAuraVeil] = 66
-kTechIdToMaterialOffset[kTechId.AuraVeil] = 66
+kTechIdToMaterialOffset[kTechId.Camouflage] = 66
+kTechIdToMaterialOffset[kTechId.Focus] = 174
 kTechIdToMaterialOffset[kTechId.Aura] = 66
 
 
-kTechIdToMaterialOffset[kTechId.HeavyRifle] = 73
 kTechIdToMaterialOffset[kTechId.HeavyRifleTech] = 73
 kTechIdToMaterialOffset[kTechId.HeavyMachineGun] = 171
 kTechIdToMaterialOffset[kTechId.HeavyMachineGunTech] = 171
@@ -410,5 +419,23 @@ function GetMaterialXYOffset(techId)
     end
     
     return nil, nil
+    
+end
+
+function GetPixelCoordsForIcon(ent, forMarine)
+    
+    if ent and HasMixin(ent, "Tech") then
+    
+        local techId = ent:GetTechId()        
+        if techId ~= kTechId.None then
+            
+            local xOffset, yOffset = GetMaterialXYOffset(techId, forMarine)
+            return {xOffset, yOffset}
+            
+        end
+                    
+    end
+    
+    return nil
     
 end

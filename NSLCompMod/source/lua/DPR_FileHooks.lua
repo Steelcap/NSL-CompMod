@@ -9,7 +9,7 @@ local ReplaceFiles = {}
 Shared.GetMatchingFileNames("lua/DPR/Replace/*.lua", true, ReplaceFiles) --what does the bool do? recurse?
 
 for i = 1, #ReplaceFiles do
-    ModLoader.SetupFileHook(GetVanillaPath(ReplaceFiles[i]), ReplaceFiles[i], "replace")
+	ModLoader.SetupFileHook(GetVanillaPath(ReplaceFiles[i]), ReplaceFiles[i], "replace")
 end
 
 local PostFiles = {}
@@ -17,4 +17,9 @@ Shared.GetMatchingFileNames("lua/DPR/Post/*.lua", true, PostFiles) --what does t
 
 for i = 1, #PostFiles do
     ModLoader.SetupFileHook(GetVanillaPath(PostFiles[i]), PostFiles[i], "post")
+end
+
+--thx Dragon <3
+if Predict then
+	ModLoader.SetupFileHook( "lua/PostLoadMod.lua", "lua/DPR/Predict/predict_loaded.lua", "post" )
 end

@@ -93,7 +93,7 @@ kTechId = createTechIdEnum {
     'MACEMP', 'Welding',
 
     -- Weapons
-    'Rifle', 'Pistol', 'Shotgun', 'HeavyRifle', 'HeavyMachineGun', 'Claw', 'Minigun', 'Railgun', 'GrenadeLauncher', 'Flamethrower', 'Axe', 'LayMines', 'Welder',
+    'Rifle', 'Pistol', 'Shotgun', 'HeavyMachineGun', 'Claw', 'Minigun', 'Railgun', 'GrenadeLauncher', 'Flamethrower', 'Axe', 'LayMines', 'Welder',
 
     -- Armor
     'Jetpack', 'JetpackFuelTech', 'JetpackArmorTech', 'Exosuit', 'ExosuitLockdownTech', 'ExosuitUpgradeTech',
@@ -146,26 +146,6 @@ kTechId = createTechIdEnum {
     'Whip', 'TwoWhips', 'EvolveBombard', 'WhipBombard', 'WhipBombardCancel', 'WhipBomb', 'Slap',
     'Shift', 'TwoShifts', 'SelectShift', 'EvolveEcho', 'ShiftHatch', 'ShiftEcho', 'ShiftEnergize',
     'Shade', 'TwoShades', 'EvolveHallucinations', 'ShadeDisorient', 'ShadeCloak', 'ShadePhantomMenu', 'ShadePhantomStructuresMenu',
-    'UpgradeCeleritySpur',
-    'CeleritySpur',
-    'UpgradeAdrenalineSpur',
-    'AdrenalineSpur',
-    'UpgradeSilenceSpur',
-    'SilenceSpur',
-
-    'UpgradeVampirismVeil',
-    'VampirismVeil',
-    'UpgradeAuraVeil',
-    'AuraVeil',
-    'UpgradeFocusVeil',
-    'FocusVeil',
-
-    'UpgradeRegenerationShell',
-    'RegenerationShell',
-    'UpgradeCarapaceShell',
-    'CarapaceShell',
-    'UpgradeCrushShell',
-    'CrushShell',
 
     'DrifterCamouflage', 'DrifterCelerity', 'DrifterRegeneration', 'Return',
 
@@ -199,17 +179,17 @@ kTechId = createTechIdEnum {
     ---- Alien abilities and upgrades
 
     --CragHive
-    'Crush',
+    'Vampirism',
     'Carapace',
     'Regeneration',
 
     --ShadeHive
     'Aura',
     'Focus',
-    'Vampirism',
+    'Camouflage',
 
     --ShiftHive
-    'Silence',
+    'Crush',
     'Celerity',
     'Adrenaline',
 
@@ -238,10 +218,10 @@ kTechId = createTechIdEnum {
     'GameStarted',
 
     'DeathTrigger',
-	
-	--CompMod Addition
-	'MedTech1', 'MedTech2',
-	
+    
+    --CompMod Addition
+    'MedTech1', 'MedTech2',
+
     'Max' -- Unused, for legacy reasons, do NOT use!
 
 }

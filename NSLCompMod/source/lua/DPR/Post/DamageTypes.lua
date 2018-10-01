@@ -7,6 +7,15 @@ kOnosNeuroToxinDamage = 6
 --Utility function to apply chamber-upgraded modifications to alien damage
 --Note: this should _always_ be called BEFORE damage-type specific modifications are done (i.e. Light vs Normal vs Structural, etc)
 function NS2Gamerules_GetUpgradedAlienDamage( target, attacker, doer, damage, armorFractionUsed, healthPerArmor, damageType, hitPoint, weapon )
+    
+    if not doer then return damage, armorFractionUsed end
+
+    local teamNumber = attacker:GetTeamNumber()
+
+    local isAffectedByCrush = doer.GetIsAffectedByCrush and attacker:GetHasUpgrade( kTechId.Crush ) and doer:GetIsAffectedByCrush()
+    local isAffectedByVampirism = doer.GetVampiricLeechScalar and attacker:GetHasUpgrade( kTechId.Vampirism )
+    local isAffectedByFocus = doer.GetIsAffectedByFocus and attacker:GetHasUpgrade( kTechId.Focus ) and doer:GetIsAffectedByFocus()
+
     if attacker:GetHasUpgrade( kTechId.Crush ) then --CragHive
         
         local shellLevel = GetShellLevel( kTeam2Index )
@@ -21,20 +30,26 @@ function NS2Gamerules_GetUpgradedAlienDamage( target, attacker, doer, damage, ar
     end
     
     if Server then
-        
-        if attacker:GetHasUpgrade( kTechId.Vampirism ) and target:isa("Player") then --ShadeHive
-            local veilLevel = GetVeilLevel( kTeam2Index )
-            if veilLevel > 0 then
-                local leechedHealth = NS2Gamerules_GetAlienVampiricLeechFactor( attacker, doer, damageType, veilLevel )
-                if attacker:GetIsAlive() then
-                    attacker:AddHealth( leechedHealth, true, kAlienVampirismNotHealArmor ) --TODO Find better method/location to perform this
+
+        -- Vampirism
+        if isAffectedByVampirism then
+            local vampirismLevel = attacker:GetShellLevel()
+            if vampirismLevel > 0 then
+                if attacker:GetIsHealable() and target:isa("Player") then
+                    local scalar = doer:GetVampiricLeechScalar()
+                    if scalar > 0 then
+                        local maxHealth = attacker:GetMaxHealth()
+                        local leechedHealth =  maxHealth * vampirismLevel * scalar
+                        attacker:AddHealth( leechedHealth, true, kAlienVampirismNotHealArmor )
+
+                    end
                 end
             end
         end
         
     end
     
-    if attacker:GetHasUpgrade( kTechId.Focus ) and DoesFocusAffectAbility(weapon) then
+    if isAffectedByFocus then
         local veilLevel = GetVeilLevel( kTeam2Index )
         local damageBonus = kSkulkNeuroToxinDamage
         if weapon == kTechId.Swipe or weapon == kTechId.Stab then
@@ -64,11 +79,11 @@ function NS2Gamerules_GetUpgradedAlienDamage( target, attacker, doer, damage, ar
 						return not target:GetIsAlive()
 					end                 
 				)
-				dotMarker:ImmuneCondition(                
-					function (self, target)
-						return not target:GetIsAlive()
-					end                 
-				)
+				-- dotMarker:ImmuneCondition(                
+				-- 	function (self, target)
+				-- 		return not target:GetIsAlive()
+				-- 	end                 
+				-- )
 		end
     end
     

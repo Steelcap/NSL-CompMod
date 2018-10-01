@@ -18,7 +18,8 @@ function MedPack:OnTouch(recipient)
         recipient:AddHealth(heal, false, true)
         recipient:AddRegeneration(regen)
         recipient.timeLastMedpack = Shared.GetTime()
-        StartSoundEffectAtOrigin(MedPack.kHealthSound, self:GetOrigin())
+
+        self:TriggerEffects("medpack_pickup", { effecthostcoords = self:GetCoords() })
 
     end
     

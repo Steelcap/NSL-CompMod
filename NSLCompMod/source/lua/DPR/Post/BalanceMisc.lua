@@ -6,7 +6,7 @@ kAlienHealRateOverLimitReduction = .2
 
 kCystUnconnectedDamage = 10
 
-kDrifterSupply = 15
+kDrifterSupply = 10 -- from 15 to 10
 kWhipSupply = 15
 kCragSupply = 10
 kShadeSupply = 10
@@ -27,3 +27,7 @@ kFocusAttackSlowAtMax = 0.05
 kHandGrenadeWeight = 0.01
 
 kAlienStructureMoveSpeed = 2
+
+-- new changes
+
+kWeaponStayTime = 23 -- from 25 to 23

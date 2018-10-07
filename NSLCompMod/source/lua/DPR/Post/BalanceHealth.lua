@@ -30,3 +30,7 @@ kMineHealth = 75 --[[ from 20 to 75  ]]    kMineArmor = 5    kMinePointValue = 1
 -- drifters
 
 kDrifterHealth = 240 --[[ from 300 to 240 ]]    kDrifterArmor = 20    kDrifterPointValue = 5
+
+-- onos
+
+kOnosHealth = 700 --[[ from 900 to 700 ]]    kOnosArmor = 450    kOnosPointValue = 30    kOnosHealtPerBioMass = 30

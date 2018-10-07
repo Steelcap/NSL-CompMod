@@ -21,3 +21,12 @@ kMatureShiftHealth = 940    kMatureShiftArmor = 130
 
 kShadeHealth = 750    kShadeArmor = 0  
 kMatureShadeHealth = 1280    kMatureShadeArmor = 0  
+
+--new changes
+
+--mine changes
+kMineHealth = 75 --[[ from 20 to 75  ]]    kMineArmor = 5    kMinePointValue = 1 -- TODO: ask phone wtf he means
+
+-- drifters
+
+kDrifterHealth = 240 --[[ from 300 to 240 ]]    kDrifterArmor = 20    kDrifterPointValue = 5

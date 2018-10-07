@@ -33,4 +33,4 @@ kDrifterHealth = 240 --[[ from 300 to 240 ]]    kDrifterArmor = 20    kDrifterPo
 
 -- onos
 
-kOnosHealth = 700 --[[ from 900 to 700 ]]    kOnosArmor = 450    kOnosPointValue = 30    kOnosHealtPerBioMass = 30
+kOnosHealth = 600 --[[ from 900 to 700 ]]    kOnosArmor = 450    kOnosPointValue = 30    kOnosHealtPerBioMass = 30

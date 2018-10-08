@@ -21,7 +21,8 @@ local researchToRemove = {
 
 local researchToChange = {
     -- Move Spores to bio 6
-    [kTechId.Spores] = {kTechId.Spores, kTechId.BioMassSix, kTechId.None, kTechId.AllAliens}
+    [kTechId.Spores] = {kTechId.Spores, kTechId.BioMassSix, kTechId.None, kTechId.AllAliens},
+    [kTechId.BoneShield] = {kTechId.BoneShield, kTechId.BioMassFour, kTechId.None, kTechId.AllAliens}
 }
 
 local oldAddResearchNode = TechTree.AddResearchNode

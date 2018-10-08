@@ -6,8 +6,8 @@ kBabblerHealth = 11
 
 kMedpackPickupDelay = 0.45
 
-kFadeArmor = 100 
-kFadeArmorFullyUpgradedAmount = 140
+kFadeArmor = 80 
+kFadeArmorFullyUpgradedAmount = 120
 
 
 kCragHealth = 600    kCragArmor = 200   
@@ -25,8 +25,12 @@ kMatureShadeHealth = 1280    kMatureShadeArmor = 0
 --new changes
 
 --mine changes
-kMineHealth = 75 --[[ from 20 to 75  ]]    kMineArmor = 5    kMinePointValue = 1 -- TODO: ask phone wtf he means
+kMineHealth = 75 --[[ from 20 to 75  ]]    kMineArmor = 5    kMinePointValue = 1
 
 -- drifters
 
 kDrifterHealth = 240 --[[ from 300 to 240 ]]    kDrifterArmor = 20    kDrifterPointValue = 5
+
+-- onos
+
+kOnosHealth = 600 --[[ from 900 to 600 ]]    kOnosArmor = 450    kOnosPointValue = 30    kOnosHealtPerBioMass = 30

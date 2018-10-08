@@ -23,7 +23,6 @@ local function GetTeleportClassname(techId)
     
     return gTeleportClassnames[techId]
 
-
 end
 
 if Server then

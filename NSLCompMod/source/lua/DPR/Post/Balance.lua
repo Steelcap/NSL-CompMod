@@ -2,7 +2,7 @@
 kGorgeCost = 8
 kLerkCost = 21
 kFadeCost = 40
-kOnosCost = 57 -- from 66 to 57
+kOnosCost = 60 -- from 66 to 57
 
 kGorgeTunnelCost = 3
 

@@ -2,7 +2,7 @@
 kGorgeCost = 8
 kLerkCost = 21
 kFadeCost = 40
-kOnosCost = 57 -- from 66 to 57
+kOnosCost = 60 -- from 66 to 57
 
 kGorgeTunnelCost = 3
 
@@ -24,10 +24,11 @@ kTechMed2ResearchTime = 90
 
 --new changes
 
-kShotgunSpreadDistance = 9.25 -- from 8.5 to 9.25
+kShotgunSpreadDistance = 9 -- from 8.5 to 9.25
 
 --mine changes
 kMineDamage = 150 -- from 125 to 150
+kMineCost = 8 -- from 10 to 8
 
 --grenade tech changes
 kGrenadeTechResearchCost = 15 -- from 10 to 15
@@ -72,3 +73,14 @@ kBileBombResearchTime = 30 -- from 40 to 30
 -- bio 4
 
 kResearchBioMassThreeCost = 50 -- from 60 to 50
+
+-- fts
+
+kFlamethrowerDamage = 8
+kBurnDamagePerSecond = 6
+
+-- drifter
+kHallucinationCloudCost = 3 -- from 2 to 3
+kEnzymeCloudCost = 1 -- from 2 to 1
+kEchoEggCost = 1 -- from 2 to 1
+kChargeDamage = 0 -- from 12 to 0

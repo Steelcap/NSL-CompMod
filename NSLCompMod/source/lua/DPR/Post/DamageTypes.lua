@@ -10,14 +10,13 @@ function NS2Gamerules_GetUpgradedAlienDamage( target, attacker, doer, damage, ar
     local isAffectedByVampirism = doer.GetVampiricLeechScalar and attacker:GetHasUpgrade( kTechId.Vampirism )
     local isAffectedByFocus = doer.GetIsAffectedByFocus and attacker:GetHasUpgrade( kTechId.Focus ) and doer:GetIsAffectedByFocus()
 
-    if attacker:GetHasUpgrade( kTechId.Crush ) then --CragHive
-        
-        local shellLevel = GetShellLevel( kTeam2Index )
-        if shellLevel > 0 then
+    if isAffectedByCrush then --Crush
+    	local crushLevel = attacker:GetSpurLevel()
+        if crushLevel > 0 then
             if target:isa("Exo") or target.GetReceivesStructuralDamage and target:GetReceivesStructuralDamage(damageType) then
-                damage = damage + ( damage * ( shellLevel * kAlienCrushDamagePercentByLevel ) )
+                damage = damage + ( damage * ( crushLevel * kAlienCrushDamagePercentByLevel ) )
             elseif target:isa("Player") then
-                armorFractionUsed = kBaseArmorUseFraction + ( shellLevel * kAlienCrushDamagePercentByLevel )
+                armorFractionUsed = kBaseArmorUseFraction + ( crushLevel * kAlienCrushDamagePercentByLevel )
             end
         end
         

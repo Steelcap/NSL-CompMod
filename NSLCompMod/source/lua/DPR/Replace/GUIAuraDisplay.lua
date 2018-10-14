@@ -135,8 +135,9 @@ function GUIAuraDisplay:Update(deltaTime)
         local screenPos = Client.WorldToScreen(worldPos)
         local distanceFraction = 1 - Clamp((worldPos - eyePos):GetLength() / 20, 0, 0.8)
         
-        local timeVal = (Shared.GetTime()+distanceFraction) * 2.0 -- thx nin <3
-        local opacity = math.max(math.sin(timeVal + math.sin(timeVal + math.sin(timeVal))), 0)
+        -- thx nin <3
+        local timeVal = (Shared.GetTime()+distanceFraction) * 2.0
+        local opacity = math.min(math.max(0.8 + math.sin(timeVal), 0), 1) 
         color.a = opacity
 
         local size = GUIScale(Vector(kIconSize.x, kIconSize.y, 0)) * distanceFraction

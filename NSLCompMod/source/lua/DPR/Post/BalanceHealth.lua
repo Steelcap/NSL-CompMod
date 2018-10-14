@@ -34,3 +34,8 @@ kDrifterHealth = 240 --[[ from 300 to 240 ]]    kDrifterArmor = 20    kDrifterPo
 -- onos
 
 kOnosHealth = 600 --[[ from 900 to 600 ]]    kOnosArmor = 450    kOnosPointValue = 30    kOnosHealtPerBioMass = 30
+
+-- skulk
+
+kSkulkHealth = 75    kSkulkArmor = 12    kSkulkPointValue = 5    kSkulkHealthPerBioMass = 6 
+kSkulkArmorFullyUpgradedAmount = 22 -- 3.33 ap per shell

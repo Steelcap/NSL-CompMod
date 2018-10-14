@@ -63,7 +63,7 @@ function NS2Gamerules_GetUpgradedAlienDamage( target, attacker, doer, damage, ar
 				dotMarker:SetDamageIntervall(1)
 				dotMarker:SetDotMarkerType(DotMarker.kType.SingleTarget)
 				dotMarker:SetTargetEffectName("poison_dart_trail")
-				dotMarker:SetDeathIconIndex(kDeathMessageIcon.SporeCloud)
+				dotMarker:SetDeathIconIndex(kDeathMessageIcon.Neurotoxin)
 				dotMarker:SetOwner(attacker)
 				dotMarker:SetAttachToTarget(target, target:GetEngagementPoint())
 			

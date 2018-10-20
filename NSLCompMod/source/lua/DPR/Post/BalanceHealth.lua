@@ -33,7 +33,7 @@ kDrifterHealth = 240 --[[ from 300 to 240 ]]    kDrifterArmor = 20    kDrifterPo
 
 -- onos
 
-kOnosHealth = 600 --[[ from 900 to 600 ]]    kOnosArmor = 450    kOnosPointValue = 30    kOnosHealtPerBioMass = 30
+kOnosHealth = 700 --[[ from 900 to 600 ]]    kOnosArmor = 450    kOnosPointValue = 30    kOnosHealtPerBioMass = 30
 
 -- skulk
 

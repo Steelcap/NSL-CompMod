@@ -1,4 +1,4 @@
-local kEchoDelay = 3 -- from 5 seconds to 3 seconds.
+local kEchoDelay = 4 -- from 5 seconds to 4 seconds.
 
 local gTeleportClassnames
 local function GetTeleportClassname(techId)

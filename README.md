@@ -3,7 +3,7 @@ A balance and feature mod for Natural Selection 2, used by the Natural Selection
 This mod is on the Steam Workshop with ID [2ADC73ED](https://steamcommunity.com/sharedfiles/filedetails/?id=719090669). The code is available at this [GitHub repo](https://github.com/Steelcap/NSL-CompMod).  
 Maintained by Steelcap.
 
-[Beta changes for season 14](https://docs.google.com/document/d/1VGVjeYruBCzsWs2jeoiOEpqzSK9aNAoe5Nop5tgu6Uc/edit?usp=sharing)
+[Beta changes for season 14](https://www.ensl.org/compmod)
 
 ## Changes
 

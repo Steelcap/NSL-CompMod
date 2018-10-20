@@ -81,6 +81,12 @@ kBurnDamagePerSecond = 6
 
 -- drifter
 kHallucinationCloudCost = 3 -- from 2 to 3
-kEnzymeCloudCost = 1 -- from 2 to 1
+kEnzymeCloudCost = 2 -- from 2 to 1
 kEchoEggCost = 1 -- from 2 to 1
 kChargeDamage = 0 -- from 12 to 0
+
+-- drop costs (make these mirror the pres costs)
+
+kWelderDropCost = 3
+kDropMineCost = 8
+kHeavyMachineGunDropCost = 15

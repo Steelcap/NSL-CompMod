@@ -89,4 +89,4 @@ kChargeDamage = 0 -- from 12 to 0
 
 kWelderDropCost = 3
 kDropMineCost = 8
-kHeavyMachineGunDropCost = 20
+kHeavyMachineGunDropCost = 15

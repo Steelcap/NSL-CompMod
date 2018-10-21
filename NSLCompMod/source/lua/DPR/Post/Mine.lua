@@ -1,1 +1,0 @@
-local kTimeArmed = 0.1

@@ -40,4 +40,4 @@ kOnosHealth = 700 --[[ from 900 to 600 ]]    kOnosArmor = 450    kOnosPointValue
 kSkulkHealth = 75    kSkulkArmor = 12    kSkulkPointValue = 5    kSkulkHealthPerBioMass = 6 
 kSkulkArmorFullyUpgradedAmount = 22 -- 3.33 ap per shell
 
-кWebHealth = 20
+kWebHealth = 20

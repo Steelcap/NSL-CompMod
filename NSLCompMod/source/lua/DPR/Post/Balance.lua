@@ -91,3 +91,9 @@ kChargeDamage = 0 -- from 12 to 0
 kWelderDropCost = 3
 kDropMineCost = 8
 kHeavyMachineGunDropCost = 15
+
+-- grenades
+
+kClusterGrenadeCost = 4
+kGasGrenadeCost = 4
+kPulseGrenadeCost = 4

@@ -94,6 +94,6 @@ kHeavyMachineGunDropCost = 15
 
 -- grenades
 
-kClusterGrenadeCost = 3
-kGasGrenadeCost = 3
-kPulseGrenadeCost = 3
+kClusterGrenadeCost = 4
+kGasGrenadeCost = 4
+kPulseGrenadeCost = 4

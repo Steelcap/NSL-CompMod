@@ -25,7 +25,7 @@ kTechMed2ResearchTime = 90
 
 --new changes
 
-kShotgunSpreadDistance = 8.25 -- from 8.5 to 9.25
+kShotgunSpreadDistance = 8.88
 
 --mine changes
 kMineDamage = 150 -- from 125 to 150

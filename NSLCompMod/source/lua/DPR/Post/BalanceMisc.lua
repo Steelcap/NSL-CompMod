@@ -18,8 +18,8 @@ kARCSupply = 15
 kSentrySupply = 10
 kRoboticsFactorySupply = 10
 
-kSentryBatterySupply = 20
-kObservatorySupply = 30
+kSentryBatterySupply = 10
+kObservatorySupply = 40
 
 -- Increases the delay between alien attacks by the given value in percentage while using the Focus upgrade.
 kFocusAttackSlowAtMax = 0.05

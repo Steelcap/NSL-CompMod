@@ -1,4 +1,5 @@
-local kClusterGrenadeBurnDuration = 4
+local kClusterBurnDurationStructure = 2
+local kClusterBurnDurationPlayer = 4
 local kBurnUpdateRate = 0.5 -- same as vanilla
 
 -- fire from cluster grenades burns for less time
@@ -48,11 +49,6 @@ local function SharedUpdate(self, deltaTime)
 
         end
 
-        -- Check what burned us, change the burn time
-        if self.fireDoerName == ClusterGrenade.kMapName then
-            self.timeBurnDuration = kClusterGrenadeBurnDuration
-        end
-
         -- See if we put ourselves out
         if time - self.timeBurnRefresh > self.timeBurnDuration then
             self:SetGameEffectMask(kGameEffect.OnFire, false)
@@ -81,14 +77,6 @@ function FireMixin:SetOnFire(attacker, doer)
 
         if doer then
             self.fireDoerId = doer:GetId()
-
-            -- Store the name of what burned us
-            -- Not a general solution but works for now
-            if doer:isa("ClusterGrenade") then 
-                self.fireDoerName = ClusterGrenade.kMapName
-            else
-                self.fireDoerName = Flamethrower.kMapName
-            end
         end
 
         local time = Shared.GetTime()
@@ -97,10 +85,18 @@ function FireMixin:SetOnFire(attacker, doer)
         self.isOnFire = true
         
         --Flat restriction to single-shot player burn time. ideally will diminish "burn-out" deaths
-        if self:isa("Player") then
-            self.timeBurnDuration = kFlamethrowerBurnDuration
+        if doer and doer:isa("ClusterGrenade") then
+            if self:isa("Player") then
+                self.timeBurnDuration = kClusterBurnDurationPlayer
+            else
+                self.timeBurnDuration = kClusterBurnDurationStructure
+            end
         else
-            self.timeBurnDuration = math.min(self.timeBurnDuration + kFlamethrowerBurnDuration, kFlamethrowerMaxBurnDuration)
+            if self:isa("Player") then
+                self.timeBurnDuration = kFlamethrowerBurnDuration
+            else
+                self.timeBurnDuration = math.min(self.timeBurnDuration + kFlamethrowerBurnDuration, kFlamethrowerMaxBurnDuration)
+            end
         end
     end
 end

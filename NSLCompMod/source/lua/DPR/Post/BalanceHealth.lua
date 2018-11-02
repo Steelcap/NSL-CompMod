@@ -6,8 +6,8 @@ kBabblerHealth = 11
 
 kMedpackPickupDelay = 0.45
 
-kFadeArmor = 100
-kFadeArmorFullyUpgradedAmount = 140
+kFadeArmor = 80
+kFadeArmorFullyUpgradedAmount = 120
 
 
 kCragHealth = 600    kCragArmor = 200   

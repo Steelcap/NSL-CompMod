@@ -31,3 +31,11 @@ kAlienStructureMoveSpeed = 2
 -- new changes
 
 kWeaponStayTime = 23 -- from 25 to 23
+
+-- arc speed boost
+
+kARCSpeedBoostCost = 2
+kARCSpeedBoostDuration = 6
+kARCSpeedBoostIncrease = 1.2
+kARCSpeedBoostTurnRate = math.pi * 1.2
+kARCSpeedBoostCooldown = 12

@@ -48,7 +48,15 @@ function BuildTechData()
         [kTechDataResearchTimeKey] = kTechMed2ResearchTime
     }
 
+    local arcspeedboost = {    
+        [kTechDataId] = kTechId.ARCSpeedBoost,      
+        [kTechDataCostKey] = kARCSpeedBoostCost,  
+        [kTechDataDisplayName] = "ARC Speed Boost",
+        [kTechDataTooltipInfo] =  [[ARC Speed Boost:  Temporarily increases the movement speed of this ARC by 20% for ]] .. ToString(kARCSpeedBoostDuration) .. "s seconds, also makes ARC immune to damage slowdown." 
+    }
+
 	table.insert(techData, medtech1)
 	table.insert(techData, medtech2)
+    table.insert(techData, arcspeedboost)    
     return techData
 end

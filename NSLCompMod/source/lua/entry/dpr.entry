@@ -1,4 +1,5 @@
 modEntry = {
+	Client = "lua/DPR_Client.lua",
 	Server = "lua/DPR_Server.lua",
 	Shared = "lua/DPR_Shared.lua",
 	FileHooks = "lua/DPR_FileHooks.lua",

@@ -1,0 +1,4 @@
+shader = "cinematics/vfx_materials/arcspeedboost.surface_shader"
+greebMap = "materials/effects/mesh_effects/arcspeedboost_greeb.dds"
+noiseMap = "materials/effects/mesh_effects/arcspeedboost_noise.dds"
+circuitMap = "materials/effects/mesh_effects/arcspeedboost_circuit.dds"

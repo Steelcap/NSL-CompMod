@@ -281,6 +281,8 @@ kTechIdToMaterialOffset[kTechId.MedPack] = 92
 --Comp Mod
 kTechIdToMaterialOffset[kTechId.MedTech1] = 92
 kTechIdToMaterialOffset[kTechId.MedTech2] = 92
+kTechIdToMaterialOffset[kTechId.ARCSpeedBoost] = 111
+
 kTechIdToMaterialOffset[kTechId.CatPackTech] = 164
 kTechIdToMaterialOffset[kTechId.CatPack] = 164
 kTechIdToMaterialOffset[kTechId.PowerPoint] = 93

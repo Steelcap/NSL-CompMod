@@ -221,6 +221,7 @@ kTechId = createTechIdEnum {
     
     --CompMod Addition
     'MedTech1', 'MedTech2',
+    'ARCSpeedBoost',
 
     'Max' -- Unused, for legacy reasons, do NOT use!
 

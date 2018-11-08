@@ -3,25 +3,25 @@ kGorgeCost = 10
 kLerkCost = 25
 kFadeCost = 44
 kOnosCost = 62
-kShotgunCost = 22
+kShotgunCost = 25
 
-kGorgeTunnelCost = 3
+kGorgeTunnelCost = 4
 
-kMarineInitialIndivRes = 22
+kMarineInitialIndivRes = 25
 kAlienInitialIndivRes = 19
 
 kMucousShieldPercent = 0.15
 
 kSupplyPerTechpoint = 50
 
-kJetpackCost = 20
-kJetpackDropCost = 20
+kJetpackCost = 23
+kJetpackDropCost = 23
 
 kTechMed1ResearchCost = 10
 kTechMed2ResearchCost = 20
 
-kTechMed1ResearchTime = 60
-kTechMed2ResearchTime = 90
+kTechMed1ResearchTime = 45
+kTechMed2ResearchTime = 60
 
 --new changes
 
@@ -29,7 +29,7 @@ kShotgunSpreadDistance = 8.88
 
 --mine changes
 kMineDamage = 150 -- from 125 to 150
-kMineCost = 8 -- from 10 to 8
+kMineCost = 10 -- from 10 to 8
 
 --grenade tech changes
 kGrenadeTechResearchCost = 15 -- from 10 to 15
@@ -39,8 +39,10 @@ kPulseGrenadeDamage = 140 -- from 110 to 140
 
 --hmgs
 
-kHeavyMachineGunCost = 15 -- from 20 to 15
+kHeavyMachineGunCost = 25 -- from 20 to 15
+kHeavyMachineGunDropCost = 25
 kHeavyMachineGunTechResearchTime = 20 -- from 30 to 20
+kHeavyMachineGunDamage = 8
 
 -- neuro changes
 

@@ -99,3 +99,7 @@ kHeavyMachineGunDropCost = 15
 kClusterGrenadeCost = 3
 kGasGrenadeCost = 3
 kPulseGrenadeCost = 3
+
+-- welders
+kPlayerArmorWeldRate = 30 -- increased to 6 armour per welder tick for players
+kExoArmorWeldRate = 20 -- add this var to make sure ^ doesnt affect exos
